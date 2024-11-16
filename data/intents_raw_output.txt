@@ -1,0 +1,39 @@
+Here is the list of intents for the college inquiry chatbot in JSON format:
+
+[
+  {
+    "tag": "update",
+    "patterns": ["check for updates", "what's new", "recent news"],
+    "responses": ["You can stay updated with the latest news and updates by subscribing to our newsletter."]
+  },
+  {
+    "tag": "about-us",
+    "patterns": ["about the college", "college information", "who are you"],
+    "responses": ["Sanjay Ghodawat Polytechnic is a institution that stands for brilliance, quality and deliverance beyond expectations."]
+  },
+  {
+    "tag": "academics",
+    "patterns": ["academic calendar", "result", "syllabus", "committees"],
+    "responses": ["You can find information about our academics, including the academic calendar, results, syllabus, and committees, on our website under the ACADEMICS section."]
+  },
+  {
+    "tag": "departments",
+    "patterns": ["computer science", "civil engineering", "mechanical engineering", "electrical engineering"],
+    "responses": ["We have a range of departments, including Computer Science, Civil Engineering, Mechanical Engineering, and Electrical Engineering. You can find more information about each department on our website under the DEPARTMENTS section."]
+  },
+  {
+    "tag": "facilities",
+    "patterns": ["hostel", "class rooms", "laboratories", "gymnasium"],
+    "responses": ["We have a range of facilities, including hostel, class rooms, laboratories, gymnasium, and more. You can find more information about our facilities on our website under the FACILITIES section."]
+  },
+  {
+    "tag": "management",
+    "patterns": ["trust", "chairman's message", "secretory's message"],
+    "responses": ["Our management team is committed to providing a great learning experience for our students. You can find more information about our management team on our website under the MANAGEMENT section."]
+  },
+  {
+    "tag": "philosophy",
+    "patterns": ["philosophy of sgp", "vision and mission"],
+    "responses": ["Our philosophy is centered around providing a great learning experience and helping our students reach their full potential. You can find more information about our philosophy on our website under the ABOUT US section."]
+  }
+]

@@ -1,0 +1,90 @@
+[
+    {
+        "tag": "about",
+        "patterns": [
+            "What is Sanjay Ghodawat Polytechnic?",
+            "About Sanjay Ghodawat Polytechnic",
+            "History of Sanjay Ghodawat Polytechnic"
+        ],
+        "responses": [
+            "Sanjay Ghodawat Polytechnic is a growing institute imparting technical knowledge and skills to the students and society at large."
+        ]
+    },
+    {
+        "tag": "vision_and_mission",
+        "patterns": [
+            "What is the vision and mission of Sanjay Ghodawat Polytechnic?",
+            "Sanjay Ghodawat Polytechnic's vision and mission",
+            "Goals of Sanjay Ghodawat Polytechnic"
+        ],
+        "responses": [
+            "To establish a knowledge city that will impart world-class education in engineering, management, and research."
+        ]
+    },
+    {
+        "tag": "facilities",
+        "patterns": [
+            "What facilities does Sanjay Ghodawat Polytechnic offer?",
+            "Facilities at Sanjay Ghodawat Polytechnic",
+            "Infrastructure at Sanjay Ghodawat Polytechnic"
+        ],
+        "responses": [
+            "Sanjay Ghodawat Polytechnic offers hostel, classrooms, laboratories, gymnasium, swimming pool, auditorium, conference hall, cafeteria, playing ground, and tennis court."
+        ]
+    },
+    {
+        "tag": "programs",
+        "patterns": [
+            "What programs does Sanjay Ghodawat Polytechnic offer?",
+            "Programs at Sanjay Ghodawat Polytechnic",
+            "Courses offered by Sanjay Ghodawat Polytechnic"
+        ],
+        "responses": [
+            "Sanjay Ghodawat Polytechnic offers diploma engineering programs in Civil, Mechanical, Electronics and Telecommunication, Computer Science and Engineering, and Electrical Engineering."
+        ]
+    },
+    {
+        "tag": "department_of_cse",
+        "patterns": [
+            "About the department of CSE at Sanjay Ghodawat Polytechnic",
+            "Department of CSE at Sanjay Ghodawat Polytechnic",
+            "Computer Science and Engineering at Sanjay Ghodawat Polytechnic"
+        ],
+        "responses": [
+            "The department of CSE at Sanjay Ghodawat Polytechnic aims to deliver professionals with strong fundamentals in computer science and engineering domain."
+        ]
+    },
+    {
+        "tag": "peo_and_psos",
+        "patterns": [
+            "Program Educational Objectives (PEO) and Program Specific Outcomes (PSO) of Sanjay Ghodawat Polytechnic",
+            "PEO and PSO of CSE at Sanjay Ghodawat Polytechnic",
+            "Goal of Sanjay Ghodawat Polytechnic"
+        ],
+        "responses": [
+            "The goal of Sanjay Ghodawat Polytechnic is to produce competent technocrats who will meet industrial challenges with societal and environmental concerns."
+        ]
+    },
+    {
+        "tag": "quality_policy",
+        "patterns": [
+            "Quality policy of Sanjay Ghodawat Polytechnic",
+            "Quality objectives of Sanjay Ghodawat Polytechnic",
+            "Sanjay Ghodawat Polytechnic's commitment to quality"
+        ],
+        "responses": [
+            "Sanjay Ghodawat Polytechnic is committed to establishing high standards to educate, enhance, and excel in imparting professional engineering and management education."
+        ]
+    },
+    {
+        "tag": "award_and_recognition",
+        "patterns": [
+            "Awards and recognition received by Sanjay Ghodawat Polytechnic",
+            "Awards won by Sanjay Ghodawat Polytechnic",
+            "Recognition received by Sanjay Ghodawat Polytechnic"
+        ],
+        "responses": [
+            "Sanjay Ghodawat Polytechnic has received the 'Ideal Educational Institute' award for outstanding performance in education and has been recognized by the NBA."
+        ]
+    }
+]
