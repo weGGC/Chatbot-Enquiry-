@@ -1,90 +1,331 @@
 [
     {
-        "tag": "about",
+        "tag": "greetings",
         "patterns": [
-            "What is Sanjay Ghodawat Polytechnic?",
-            "About Sanjay Ghodawat Polytechnic",
-            "History of Sanjay Ghodawat Polytechnic"
+            "Hi",
+            "Hello",
+            "Hey there",
+            "Good morning",
+            "Good evening"
         ],
         "responses": [
-            "Sanjay Ghodawat Polytechnic is a growing institute imparting technical knowledge and skills to the students and society at large."
+            "Hello! Welcome to Sanjay Ghodawat Polytechnic. How can I assist you today?",
+            "Hi there! How can I help you with your queries about Sanjay Ghodawat Polytechnic?",
+            "Greetings! Feel free to ask about admissions, programs, student life, or anything else you'd like to know."
         ]
     },
     {
-        "tag": "vision_and_mission",
+        "tag": "goodbye",
         "patterns": [
-            "What is the vision and mission of Sanjay Ghodawat Polytechnic?",
-            "Sanjay Ghodawat Polytechnic's vision and mission",
-            "Goals of Sanjay Ghodawat Polytechnic"
+            "Bye",
+            "Goodbye",
+            "See you later",
+            "Take care"
         ],
         "responses": [
-            "To establish a knowledge city that will impart world-class education in engineering, management, and research."
+            "Goodbye! Have a great day. Feel free to return if you have more questions.",
+            "See you later! Don't hesitate to ask if you have more queries.",
+            "Take care! We're here to help you anytime."
+        ]
+    },
+    {
+        "tag": "thanks",
+        "patterns": [
+            "Thank you",
+            "Thanks a lot",
+            "Thanks",
+            "I appreciate it"
+        ],
+        "responses": [
+            "You're welcome! I'm glad I could help.",
+            "No problem at all! Let me know if there's anything else I can assist with.",
+            "Anytime! Feel free to reach out if you have more questions."
+        ]
+    },
+    {
+        "tag": "general-info",
+        "patterns": [
+            "Tell me about Sanjay Ghodawat Polytechnic",
+            "What is Sanjay Ghodawat Polytechnic?",
+            "Can you give me an overview of your college?",
+            "What makes your institution special?"
+        ],
+        "responses": [
+            "Sanjay Ghodawat Polytechnic is a premier institute offering high-quality technical education in fields such as Civil Engineering, Mechanical Engineering, Electrical Engineering, Electronics and Telecommunication, and Computer Science. We focus on innovation, leadership, and producing industry-ready professionals.",
+            "Our institution is dedicated to providing state-of-the-art facilities, an experienced faculty team, and a vibrant campus life. We aim to nurture technocrats with a strong foundation in academics and practical skills.",
+            "Sanjay Ghodawat Polytechnic is known for its modern infrastructure, excellent faculty, and a robust placement program that prepares students for successful careers."
+        ]
+    },
+    {
+        "tag": "help",
+        "patterns": [
+            "Can you help me?",
+            "I need assistance",
+            "How do I get help?",
+            "What can you do for me?"
+        ],
+        "responses": [
+            "Of course! I'm here to help. You can ask me about admissions, programs, facilities, placements, or any other information about Sanjay Ghodawat Polytechnic.",
+            "Sure! Feel free to ask about our programs, student life, contact information, or anything else.",
+            "I'm here to provide information about our institution. What would you like to know?"
+        ]
+    },
+    {
+        "tag": "admission-process",
+        "patterns": [
+            "How do I apply?",
+            "What is the admission process?",
+            "What are the eligibility criteria?",
+            "What documents are required for admission?"
+        ],
+        "responses": [
+            "Our admission process involves submitting your 10th and 12th-grade mark sheets, along with other necessary documents. Please visit our admissions section on the website for detailed steps.",
+            "To apply, you'll need to fill out the application form, provide your academic documents, and meet the eligibility criteria. Check our website for specific details and deadlines.",
+            "Eligibility criteria include passing 10th grade (or equivalent) for diploma courses. Additional requirements may apply depending on the program. Visit our website for more information."
         ]
     },
     {
         "tag": "facilities",
         "patterns": [
-            "What facilities does Sanjay Ghodawat Polytechnic offer?",
-            "Facilities at Sanjay Ghodawat Polytechnic",
-            "Infrastructure at Sanjay Ghodawat Polytechnic"
+            "What facilities do you provide?",
+            "Do you have hostels?",
+            "What kind of infrastructure does your college have?",
+            "Tell me about your campus facilities"
         ],
         "responses": [
-            "Sanjay Ghodawat Polytechnic offers hostel, classrooms, laboratories, gymnasium, swimming pool, auditorium, conference hall, cafeteria, playing ground, and tennis court."
+            "We provide a wide range of facilities, including modern classrooms, well-equipped labs, a library, hostels, a gym, a swimming pool, and sports facilities. Our campus is designed to foster a comfortable and productive learning environment.",
+            "Yes, we have hostels with all essential amenities. Additionally, our campus includes recreational areas, an auditorium, and a cafeteria for students.",
+            "Our infrastructure includes state-of-the-art labs, high-tech classrooms, and comprehensive sports and recreation facilities to support overall student development."
         ]
     },
     {
-        "tag": "programs",
+        "tag": "placements",
         "patterns": [
-            "What programs does Sanjay Ghodawat Polytechnic offer?",
-            "Programs at Sanjay Ghodawat Polytechnic",
-            "Courses offered by Sanjay Ghodawat Polytechnic"
+            "What about placements?",
+            "Do your students get placed?",
+            "What companies visit your campus?",
+            "Tell me about the placement opportunities"
         ],
         "responses": [
-            "Sanjay Ghodawat Polytechnic offers diploma engineering programs in Civil, Mechanical, Electronics and Telecommunication, Computer Science and Engineering, and Electrical Engineering."
+            "We have an excellent placement record with students being hired by top companies like Infosys, TCS, and others. Our placement cell provides training and opportunities to ensure students are industry-ready.",
+            "Yes, our students secure placements in leading companies. We also have tie-ups with various industries to facilitate internships and job opportunities.",
+            "Our placement cell organizes regular recruitment drives and provides career counseling to help students secure jobs in their chosen fields."
         ]
     },
     {
-        "tag": "department_of_cse",
+        "tag": "student-life",
         "patterns": [
-            "About the department of CSE at Sanjay Ghodawat Polytechnic",
-            "Department of CSE at Sanjay Ghodawat Polytechnic",
-            "Computer Science and Engineering at Sanjay Ghodawat Polytechnic"
+            "What is student life like?",
+            "Do you have clubs and activities?",
+            "What extracurriculars are available?",
+            "How is campus life?"
         ],
         "responses": [
-            "The department of CSE at Sanjay Ghodawat Polytechnic aims to deliver professionals with strong fundamentals in computer science and engineering domain."
+            "Student life here is vibrant and engaging. We offer clubs, sports teams, cultural activities, and frequent events to enrich the college experience.",
+            "We have numerous extracurricular activities, including technical clubs, cultural events, and sports tournaments, to ensure a holistic development for our students.",
+            "Campus life is a blend of learning and fun, with plenty of opportunities to explore your interests and connect with peers."
         ]
     },
     {
-        "tag": "peo_and_psos",
+        "tag": "contact-info",
         "patterns": [
-            "Program Educational Objectives (PEO) and Program Specific Outcomes (PSO) of Sanjay Ghodawat Polytechnic",
-            "PEO and PSO of CSE at Sanjay Ghodawat Polytechnic",
-            "Goal of Sanjay Ghodawat Polytechnic"
+            "How do I contact you?",
+            "What is your phone number?",
+            "Where is your campus located?",
+            "Can I get the contact details?"
         ],
         "responses": [
-            "The goal of Sanjay Ghodawat Polytechnic is to produce competent technocrats who will meet industrial challenges with societal and environmental concerns."
+            "You can contact us at [insert phone number/email]. Our campus is located at [insert address]. Office hours are from 9:00 AM to 5:00 PM.",
+            "Feel free to reach out to us via phone at [insert phone number] or email at [insert email address]. We're located at [insert address].",
+            "Our contact number is [insert phone number], and our email address is [insert email address]. We're happy to assist you during office hours."
+        ]
+    }
+]
+[
+    {
+        "tag": "greetings",
+        "patterns": [
+            "Hi",
+            "Hello",
+            "Hey",
+            "Good morning",
+            "Good evening",
+            "What's up?",
+            "Greetings"
+        ],
+        "responses": [
+            "Hello! Welcome to Sanjay Ghodawat Polytechnic. How can I assist you today?",
+            "Hi there! I'm here to help with any questions about our institution.",
+            "Good to see you! Let me know how I can help you today."
         ]
     },
     {
-        "tag": "quality_policy",
+        "tag": "farewell",
         "patterns": [
-            "Quality policy of Sanjay Ghodawat Polytechnic",
-            "Quality objectives of Sanjay Ghodawat Polytechnic",
-            "Sanjay Ghodawat Polytechnic's commitment to quality"
+            "Goodbye",
+            "Bye",
+            "See you later",
+            "Take care",
+            "Catch you later"
         ],
         "responses": [
-            "Sanjay Ghodawat Polytechnic is committed to establishing high standards to educate, enhance, and excel in imparting professional engineering and management education."
+            "Goodbye! Have a wonderful day ahead.",
+            "See you soon! Feel free to reach out if you have more queries.",
+            "Take care and best of luck!"
         ]
     },
     {
-        "tag": "award_and_recognition",
+        "tag": "gratitude",
         "patterns": [
-            "Awards and recognition received by Sanjay Ghodawat Polytechnic",
-            "Awards won by Sanjay Ghodawat Polytechnic",
-            "Recognition received by Sanjay Ghodawat Polytechnic"
+            "Thank you",
+            "Thanks",
+            "Thanks a lot",
+            "Much appreciated",
+            "You're great"
         ],
         "responses": [
-            "Sanjay Ghodawat Polytechnic has received the 'Ideal Educational Institute' award for outstanding performance in education and has been recognized by the NBA."
+            "You're welcome! I'm glad I could help.",
+            "No problem at all! Let me know if there's anything else you need.",
+            "Happy to assist! Feel free to ask if you have more questions."
+        ]
+    },
+    {
+        "tag": "about_college",
+        "patterns": [
+            "Tell me about your college",
+            "What is Sanjay Ghodawat Polytechnic?",
+            "Give me an overview of your institute",
+            "What makes your college unique?"
+        ],
+        "responses": [
+            "Sanjay Ghodawat Polytechnic is a premier institute offering diploma programs in multiple engineering disciplines. We pride ourselves on providing quality education, cutting-edge facilities, and a vibrant campus life.",
+            "We are a leading polytechnic known for our excellence in education, modern infrastructure, and strong industry connections. Our focus is on preparing students for successful careers.",
+            "Sanjay Ghodawat Polytechnic provides a balanced mix of academics, innovation, and extracurriculars to create future-ready technocrats."
+        ]
+    },
+    {
+        "tag": "admission_requirements",
+        "patterns": [
+            "What are the requirements for admission?",
+            "How do I get admitted?",
+            "What documents are needed for admission?",
+            "Eligibility for admission"
+        ],
+        "responses": [
+            "To apply, you'll need your 10th and 12th grade mark sheets, identification documents, and other relevant certificates. Visit our website for the full list of requirements.",
+            "Admission requires submitting your academic records and meeting the eligibility criteria for the desired program. Feel free to reach out for more details.",
+            "Eligibility includes passing 10th grade for diploma courses. Additional documents like proof of identity and address are also required."
+        ]
+    },
+    {
+        "tag": "admission_process",
+        "patterns": [
+            "How can I apply for admission?",
+            "What is the admission procedure?",
+            "Explain the admission process",
+            "Steps to apply for admission"
+        ],
+        "responses": [
+            "The admission process involves filling out an online application, submitting the required documents, and attending counseling sessions. Visit our website for detailed instructions.",
+            "To apply, complete the application form online, upload the necessary documents, and participate in the selection process.",
+            "Start by registering on our website, upload your documents, and follow the counseling schedule provided. Let us know if you need help!"
+        ]
+    },
+    {
+        "tag": "programs_offered",
+        "patterns": [
+            "What courses do you offer?",
+            "Which programs are available?",
+            "List the diploma programs",
+            "What can I study here?"
+        ],
+        "responses": [
+            "We offer diploma programs in Civil Engineering, Mechanical Engineering, Electrical Engineering, Electronics and Telecommunication, and Computer Science. Visit our website for the complete list.",
+            "Our programs include engineering diplomas in various fields like Civil, Mechanical, and Computer Science. Check out our curriculum on the website for more details.",
+            "You can choose from several engineering disciplines such as Electrical, Electronics, and Computer Science. Let me know if you'd like more information on a specific course."
+        ]
+    },
+    {
+        "tag": "facilities_and_campus",
+        "patterns": [
+            "What facilities does your college provide?",
+            "Do you have hostels?",
+            "Tell me about your campus",
+            "Do you have a library and labs?"
+        ],
+        "responses": [
+            "Our campus features modern classrooms, fully equipped labs, a library, hostels, a gym, and recreational facilities. We aim to provide a comprehensive learning environment.",
+            "Yes, we have hostels with all essential amenities. Our campus also includes sports facilities, a cafeteria, and a well-maintained library.",
+            "We provide state-of-the-art infrastructure, including advanced laboratories, a spacious library, and comfortable hostels to ensure a great student experience."
+        ]
+    },
+    {
+        "tag": "placements_and_jobs",
+        "patterns": [
+            "What are your placement statistics?",
+            "Do you help students find jobs?",
+            "What kind of companies recruit your students?",
+            "Tell me about job opportunities after graduation"
+        ],
+        "responses": [
+            "We have an excellent placement record with top companies like Infosys, Wipro, and TCS recruiting our students. Our placement cell also provides training to prepare students for interviews.",
+            "Our students are placed in leading companies, thanks to our strong industry connections and placement training programs.",
+            "We regularly conduct placement drives and have collaborations with reputed organizations to ensure great job opportunities for our graduates."
+        ]
+    },
+    {
+        "tag": "student_life",
+        "patterns": [
+            "What is life like at your college?",
+            "Do you have clubs and activities?",
+            "What extracurricular activities are available?",
+            "Tell me about campus life"
+        ],
+        "responses": [
+            "Student life here is lively and engaging, with cultural events, sports, technical clubs, and more to ensure holistic development.",
+            "We offer a variety of extracurricular activities, including sports, music, dance, and technical fests. Our student clubs keep the campus buzzing with events.",
+            "Our campus life blends academics with fun, offering ample opportunities to participate in sports, cultural activities, and innovative projects."
+        ]
+    },
+    {
+        "tag": "contact_and_location",
+        "patterns": [
+            "How can I contact you?",
+            "What is your address?",
+            "Where is your college located?",
+            "Give me your phone number"
+        ],
+        "responses": [
+            "You can contact us at [insert phone number/email]. Our campus is located at [insert address], and our office hours are 9:00 AM to 5:00 PM.",
+            "Feel free to reach out via email at [insert email] or call us at [insert phone number]. We're located at [insert address].",
+            "Visit us at [insert address] or call [insert phone number] during office hours. We'd be happy to assist you."
+        ]
+    },
+    {
+        "tag": "vision_and_mission",
+        "patterns": [
+            "What is your vision and mission?",
+            "What are your goals?",
+            "What does your college stand for?"
+        ],
+        "responses": [
+            "Our vision is to provide high-quality education and produce competent professionals who meet industry needs while addressing societal and environmental challenges.",
+            "Our mission is to foster innovation, leadership, and social responsibility in students by creating a dynamic learning environment.",
+            "We aim to nurture students into future leaders through a blend of academics, practical skills, and ethical values."
+        ]
+    },
+    {
+        "tag": "faqs",
+        "patterns": [
+            "What are some common questions?",
+            "Can you give me quick information?",
+            "Tell me the FAQs",
+            "Do you have a FAQ section?"
+        ],
+        "responses": [
+            "Sure! You can ask about admissions, programs, facilities, placements, or anything else. Let me know what you're curious about.",
+            "Feel free to ask any specific questions, like admission requirements or placement opportunities. I'm here to help!",
+            "You can ask about our campus life, courses, or even our contact details. Let me know your query!"
         ]
     }
 ]
