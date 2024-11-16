@@ -6,149 +6,6 @@
             "Hello",
             "Hey there",
             "Good morning",
-            "Good evening"
-        ],
-        "responses": [
-            "Hello! Welcome to Sanjay Ghodawat Polytechnic. How can I assist you today?",
-            "Hi there! How can I help you with your queries about Sanjay Ghodawat Polytechnic?",
-            "Greetings! Feel free to ask about admissions, programs, student life, or anything else you'd like to know."
-        ]
-    },
-    {
-        "tag": "goodbye",
-        "patterns": [
-            "Bye",
-            "Goodbye",
-            "See you later",
-            "Take care"
-        ],
-        "responses": [
-            "Goodbye! Have a great day. Feel free to return if you have more questions.",
-            "See you later! Don't hesitate to ask if you have more queries.",
-            "Take care! We're here to help you anytime."
-        ]
-    },
-    {
-        "tag": "thanks",
-        "patterns": [
-            "Thank you",
-            "Thanks a lot",
-            "Thanks",
-            "I appreciate it"
-        ],
-        "responses": [
-            "You're welcome! I'm glad I could help.",
-            "No problem at all! Let me know if there's anything else I can assist with.",
-            "Anytime! Feel free to reach out if you have more questions."
-        ]
-    },
-    {
-        "tag": "general-info",
-        "patterns": [
-            "Tell me about Sanjay Ghodawat Polytechnic",
-            "What is Sanjay Ghodawat Polytechnic?",
-            "Can you give me an overview of your college?",
-            "What makes your institution special?"
-        ],
-        "responses": [
-            "Sanjay Ghodawat Polytechnic is a premier institute offering high-quality technical education in fields such as Civil Engineering, Mechanical Engineering, Electrical Engineering, Electronics and Telecommunication, and Computer Science. We focus on innovation, leadership, and producing industry-ready professionals.",
-            "Our institution is dedicated to providing state-of-the-art facilities, an experienced faculty team, and a vibrant campus life. We aim to nurture technocrats with a strong foundation in academics and practical skills.",
-            "Sanjay Ghodawat Polytechnic is known for its modern infrastructure, excellent faculty, and a robust placement program that prepares students for successful careers."
-        ]
-    },
-    {
-        "tag": "help",
-        "patterns": [
-            "Can you help me?",
-            "I need assistance",
-            "How do I get help?",
-            "What can you do for me?"
-        ],
-        "responses": [
-            "Of course! I'm here to help. You can ask me about admissions, programs, facilities, placements, or any other information about Sanjay Ghodawat Polytechnic.",
-            "Sure! Feel free to ask about our programs, student life, contact information, or anything else.",
-            "I'm here to provide information about our institution. What would you like to know?"
-        ]
-    },
-    {
-        "tag": "admission-process",
-        "patterns": [
-            "How do I apply?",
-            "What is the admission process?",
-            "What are the eligibility criteria?",
-            "What documents are required for admission?"
-        ],
-        "responses": [
-            "Our admission process involves submitting your 10th and 12th-grade mark sheets, along with other necessary documents. Please visit our admissions section on the website for detailed steps.",
-            "To apply, you'll need to fill out the application form, provide your academic documents, and meet the eligibility criteria. Check our website for specific details and deadlines.",
-            "Eligibility criteria include passing 10th grade (or equivalent) for diploma courses. Additional requirements may apply depending on the program. Visit our website for more information."
-        ]
-    },
-    {
-        "tag": "facilities",
-        "patterns": [
-            "What facilities do you provide?",
-            "Do you have hostels?",
-            "What kind of infrastructure does your college have?",
-            "Tell me about your campus facilities"
-        ],
-        "responses": [
-            "We provide a wide range of facilities, including modern classrooms, well-equipped labs, a library, hostels, a gym, a swimming pool, and sports facilities. Our campus is designed to foster a comfortable and productive learning environment.",
-            "Yes, we have hostels with all essential amenities. Additionally, our campus includes recreational areas, an auditorium, and a cafeteria for students.",
-            "Our infrastructure includes state-of-the-art labs, high-tech classrooms, and comprehensive sports and recreation facilities to support overall student development."
-        ]
-    },
-    {
-        "tag": "placements",
-        "patterns": [
-            "What about placements?",
-            "Do your students get placed?",
-            "What companies visit your campus?",
-            "Tell me about the placement opportunities"
-        ],
-        "responses": [
-            "We have an excellent placement record with students being hired by top companies like Infosys, TCS, and others. Our placement cell provides training and opportunities to ensure students are industry-ready.",
-            "Yes, our students secure placements in leading companies. We also have tie-ups with various industries to facilitate internships and job opportunities.",
-            "Our placement cell organizes regular recruitment drives and provides career counseling to help students secure jobs in their chosen fields."
-        ]
-    },
-    {
-        "tag": "student-life",
-        "patterns": [
-            "What is student life like?",
-            "Do you have clubs and activities?",
-            "What extracurriculars are available?",
-            "How is campus life?"
-        ],
-        "responses": [
-            "Student life here is vibrant and engaging. We offer clubs, sports teams, cultural activities, and frequent events to enrich the college experience.",
-            "We have numerous extracurricular activities, including technical clubs, cultural events, and sports tournaments, to ensure a holistic development for our students.",
-            "Campus life is a blend of learning and fun, with plenty of opportunities to explore your interests and connect with peers."
-        ]
-    },
-    {
-        "tag": "contact-info",
-        "patterns": [
-            "How do I contact you?",
-            "What is your phone number?",
-            "Where is your campus located?",
-            "Can I get the contact details?"
-        ],
-        "responses": [
-            "You can contact us at [insert phone number/email]. Our campus is located at [insert address]. Office hours are from 9:00 AM to 5:00 PM.",
-            "Feel free to reach out to us via phone at [insert phone number] or email at [insert email address]. We're located at [insert address].",
-            "Our contact number is [insert phone number], and our email address is [insert email address]. We're happy to assist you during office hours."
-        ]
-    }
-]
-[
-    {
-        "tag": "greetings",
-        "patterns": [
-            "Hi",
-            "Hello",
-            "Hey",
-            "Good morning",
             "Good evening",
             "What's up?",
             "Greetings"
@@ -160,10 +17,10 @@
         ]
     },
     {
-        "tag": "farewell",
+        "tag": "goodbye",
         "patterns": [
-            "Goodbye",
             "Bye",
+            "Goodbye",
             "See you later",
             "Take care",
             "Catch you later"
@@ -190,142 +47,125 @@
         ]
     },
     {
-        "tag": "about_college",
+        "tag": "general_info",
         "patterns": [
-            "Tell me about your college",
             "What is Sanjay Ghodawat Polytechnic?",
-            "Give me an overview of your institute",
-            "What makes your college unique?"
+            "Can you give me an overview of your college?",
+            "Tell me about your institution",
+            "What makes your institution special?"
         ],
         "responses": [
-            "Sanjay Ghodawat Polytechnic is a premier institute offering diploma programs in multiple engineering disciplines. We pride ourselves on providing quality education, cutting-edge facilities, and a vibrant campus life.",
-            "We are a leading polytechnic known for our excellence in education, modern infrastructure, and strong industry connections. Our focus is on preparing students for successful careers.",
-            "Sanjay Ghodawat Polytechnic provides a balanced mix of academics, innovation, and extracurriculars to create future-ready technocrats."
-        ]
-    },
-    {
-        "tag": "admission_requirements",
-        "patterns": [
-            "What are the requirements for admission?",
-            "How do I get admitted?",
-            "What documents are needed for admission?",
-            "Eligibility for admission"
-        ],
-        "responses": [
-            "To apply, you'll need your 10th and 12th grade mark sheets, identification documents, and other relevant certificates. Visit our website for the full list of requirements.",
-            "Admission requires submitting your academic records and meeting the eligibility criteria for the desired program. Feel free to reach out for more details.",
-            "Eligibility includes passing 10th grade for diploma courses. Additional documents like proof of identity and address are also required."
+            "Sanjay Ghodawat Polytechnic is a leading institute offering technical education in fields such as Civil, Mechanical, Electrical, and Computer Science. We aim to produce industry-ready professionals with strong academic and practical skills.",
+            "Our institution focuses on providing high-quality education, state-of-the-art infrastructure, and fostering innovation and leadership.",
+            "Sanjay Ghodawat Polytechnic stands out for its excellent faculty, modern facilities, and a robust placement program preparing students for successful careers."
         ]
     },
     {
         "tag": "admission_process",
         "patterns": [
-            "How can I apply for admission?",
-            "What is the admission procedure?",
-            "Explain the admission process",
-            "Steps to apply for admission"
+            "How do I apply?",
+            "What is the process to apply for admission?",
+            "Can you explain the admission steps?",
+            "What are the eligibility criteria for admission?"
         ],
         "responses": [
-            "The admission process involves filling out an online application, submitting the required documents, and attending counseling sessions. Visit our website for detailed instructions.",
-            "To apply, complete the application form online, upload the necessary documents, and participate in the selection process.",
-            "Start by registering on our website, upload your documents, and follow the counseling schedule provided. Let us know if you need help!"
+            "To apply, you'll need to fill out the application form and submit your academic documents. Eligibility criteria include passing the 10th grade (or equivalent) for diploma courses. Visit our admissions section for more details.",
+            "Our admission process involves document verification, meeting eligibility criteria, and submitting your application before the deadline. Check our website for specific details.",
+            "Eligibility criteria and steps for admission vary based on the program. Please visit our website or contact us for assistance."
         ]
     },
     {
-        "tag": "programs_offered",
-        "patterns": [
-            "What courses do you offer?",
-            "Which programs are available?",
-            "List the diploma programs",
-            "What can I study here?"
-        ],
-        "responses": [
-            "We offer diploma programs in Civil Engineering, Mechanical Engineering, Electrical Engineering, Electronics and Telecommunication, and Computer Science. Visit our website for the complete list.",
-            "Our programs include engineering diplomas in various fields like Civil, Mechanical, and Computer Science. Check out our curriculum on the website for more details.",
-            "You can choose from several engineering disciplines such as Electrical, Electronics, and Computer Science. Let me know if you'd like more information on a specific course."
-        ]
-    },
-    {
-        "tag": "facilities_and_campus",
-        "patterns": [
-            "What facilities does your college provide?",
-            "Do you have hostels?",
-            "Tell me about your campus",
-            "Do you have a library and labs?"
-        ],
-        "responses": [
-            "Our campus features modern classrooms, fully equipped labs, a library, hostels, a gym, and recreational facilities. We aim to provide a comprehensive learning environment.",
-            "Yes, we have hostels with all essential amenities. Our campus also includes sports facilities, a cafeteria, and a well-maintained library.",
-            "We provide state-of-the-art infrastructure, including advanced laboratories, a spacious library, and comfortable hostels to ensure a great student experience."
-        ]
-    },
-    {
-        "tag": "placements_and_jobs",
-        "patterns": [
-            "What are your placement statistics?",
-            "Do you help students find jobs?",
-            "What kind of companies recruit your students?",
-            "Tell me about job opportunities after graduation"
-        ],
-        "responses": [
-            "We have an excellent placement record with top companies like Infosys, Wipro, and TCS recruiting our students. Our placement cell also provides training to prepare students for interviews.",
-            "Our students are placed in leading companies, thanks to our strong industry connections and placement training programs.",
-            "We regularly conduct placement drives and have collaborations with reputed organizations to ensure great job opportunities for our graduates."
-        ]
-    },
-    {
-        "tag": "student_life",
-        "patterns": [
-            "What is life like at your college?",
-            "Do you have clubs and activities?",
-            "What extracurricular activities are available?",
-            "Tell me about campus life"
-        ],
-        "responses": [
-            "Student life here is lively and engaging, with cultural events, sports, technical clubs, and more to ensure holistic development.",
-            "We offer a variety of extracurricular activities, including sports, music, dance, and technical fests. Our student clubs keep the campus buzzing with events.",
-            "Our campus life blends academics with fun, offering ample opportunities to participate in sports, cultural activities, and innovative projects."
-        ]
-    },
-    {
-        "tag": "contact_and_location",
+        "tag": "contact_info",
         "patterns": [
             "How can I contact you?",
-            "What is your address?",
-            "Where is your college located?",
-            "Give me your phone number"
+            "What is your phone number?",
+            "Where is your campus located?",
+            "Can I get your contact details?"
         ],
         "responses": [
-            "You can contact us at [insert phone number/email]. Our campus is located at [insert address], and our office hours are 9:00 AM to 5:00 PM.",
-            "Feel free to reach out via email at [insert email] or call us at [insert phone number]. We're located at [insert address].",
-            "Visit us at [insert address] or call [insert phone number] during office hours. We'd be happy to assist you."
+            "You can contact us at 123-456-7890 or email info@sgipolytechnic.in. Our campus is located at Atigre, Kolhapur.",
+            "For inquiries, reach out to us via phone or email. We're happy to assist you!",
+            "Visit our campus at Atigre, Kolhapur, or contact us through our website for more information."
         ]
     },
     {
-        "tag": "vision_and_mission",
+        "tag": "placements",
         "patterns": [
-            "What is your vision and mission?",
-            "What are your goals?",
-            "What does your college stand for?"
+            "What about placements?",
+            "Do your students get placed?",
+            "What companies visit your campus?",
+            "Tell me about the placement opportunities"
         ],
         "responses": [
-            "Our vision is to provide high-quality education and produce competent professionals who meet industry needs while addressing societal and environmental challenges.",
-            "Our mission is to foster innovation, leadership, and social responsibility in students by creating a dynamic learning environment.",
-            "We aim to nurture students into future leaders through a blend of academics, practical skills, and ethical values."
+            "Our placement cell has a stellar record of placing students in top companies like Infosys, TCS, and Wipro. We offer extensive training and support for interviews and internships.",
+            "Yes, our students secure placements in renowned companies. The placement cell organizes training programs and recruitment drives regularly.",
+            "We have tie-ups with leading industries and organize career counseling sessions to ensure our students are industry-ready."
         ]
     },
     {
-        "tag": "faqs",
+        "tag": "facilities",
         "patterns": [
-            "What are some common questions?",
-            "Can you give me quick information?",
-            "Tell me the FAQs",
-            "Do you have a FAQ section?"
+            "What facilities does your college offer?",
+            "Do you have a library?",
+            "Are there sports facilities?",
+            "Tell me about the infrastructure."
         ],
         "responses": [
-            "Sure! You can ask about admissions, programs, facilities, placements, or anything else. Let me know what you're curious about.",
-            "Feel free to ask any specific questions, like admission requirements or placement opportunities. I'm here to help!",
-            "You can ask about our campus life, courses, or even our contact details. Let me know your query!"
+            "Our campus boasts state-of-the-art laboratories, a well-stocked library, sports complexes, and modern classrooms.",
+            "We offer excellent infrastructure, including secure Wi-Fi, conference halls, and recreational facilities like a gymnasium and swimming pool.",
+            "Our facilities are designed to provide a comprehensive learning experience, including advanced labs, spacious classrooms, and student hostels."
+        ]
+    },
+    {
+        "tag": "achievements",
+        "patterns": [
+            "What are your college achievements?",
+            "Have you received any awards?",
+            "Tell me about your recognitions."
+        ],
+        "responses": [
+            "Sanjay Ghodawat Polytechnic is recognized as one of the best polytechnic institutes in Maharashtra, with NBA accreditation till 2025.",
+            "We have received the 'Ideal Educational Institute' award for outstanding performance in education.",
+            "Our institution has achieved numerous accolades, including 'Excellent Grade' by MSBTE and the 'Best Laboratory Award' for our Electrical Department."
+        ]
+    },
+    {
+        "tag": "vision_mission",
+        "patterns": [
+            "What is your vision?",
+            "Tell me about your mission statement.",
+            "What are your goals as an institution?"
+        ],
+        "responses": [
+            "Our vision is to become a world-class institute of learning and research in engineering and management, achieving academic excellence and fostering innovation.",
+            "Our mission is to produce competent professionals with a strong foundation in ethical and social values, equipped to meet global challenges.",
+            "We aim to provide high-quality education, state-of-the-art infrastructure, and a supportive learning environment for our students."
+        ]
+    },
+    {
+        "tag": "industry_interaction",
+        "patterns": [
+            "Do you have industry tie-ups?",
+            "Tell me about your industry interactions.",
+            "Do you provide real-world experience to students?"
+        ],
+        "responses": [
+            "We have strong industry ties and organize guest lectures, internships, and live projects with leading companies.",
+            "Our programs include regular industry interactions to keep students updated with current practices and technologies.",
+            "We focus on bridging the gap between academia and industry through effective collaborations and exposure to industrial challenges."
+        ]
+    },
+    {
+        "tag": "research_development",
+        "patterns": [
+            "Do you have research programs?",
+            "What about innovation and R&D?",
+            "Tell me about your development initiatives."
+        ],
+        "responses": [
+            "We encourage students and faculty to participate in research and innovation programs. Our institution supports paper publications and project development.",
+            "Our R&D cell is dedicated to fostering creativity and innovation, offering state-of-the-art facilities for research.",
+            "We promote developing commercially viable technologies and solutions that address societal challenges."
         ]
     }
 ]

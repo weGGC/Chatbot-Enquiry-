@@ -3,84 +3,124 @@ import random
 import pickle
 import os
 from utils import spacy_tokenizer
-from streamlit_chat import message  # Import the message component
+from streamlit_chat import message
 
-# Set page configuration at the very top
-st.set_page_config(page_title="College Enquiry Chatbot", page_icon=":robot_face:", layout="centered")
+# Set page configuration
+st.set_page_config(
+    page_title="🎓 College Enquiry Chatbot",
+    page_icon=":robot_face:",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
 
-# Determine the base directory
+# File paths and configuration
 script_dir = os.path.dirname(__file__)
 model_file = os.path.join(script_dir, '..', 'models', 'chatbot_model.pkl')
+CONFIDENCE_THRESHOLD = 0.1  # Minimum confidence for intent matching
 
-# Define load_model() function but do not call it yet
-@st.cache_resource
+# Load the trained model and intents
+@st.cache_resource(show_spinner=False)
 def load_model():
     try:
         with open(model_file, 'rb') as f:
-            return pickle.load(f)
+            model_data = pickle.load(f)
+            if len(model_data) != 3:
+                raise ValueError("Model file is corrupted or incomplete.")
+            return model_data
     except FileNotFoundError:
-        st.error(f"Error: '{model_file}' not found. Please run 'train_chatbot.py' first.")
+        st.error("Model file not found. Please ensure the model is trained and available.")
         st.stop()
     except Exception as e:
-        st.error(f"An unexpected error occurred while loading the model: {e}")
+        st.error(f"Error loading model: {e}")
         st.stop()
 
-# Function to generate chatbot response
+# Generate chatbot responses
 def chatbot_response(user_input, vectorizer, clf, intents):
-    cleaned_input = ' '.join(spacy_tokenizer(user_input))
-    user_input_processed = vectorizer.transform([cleaned_input])
-    predicted_probabilities = clf.predict_proba(user_input_processed)
-    predicted_tag = clf.predict(user_input_processed)[0]
-    max_proba = max(predicted_probabilities[0])
+    if not user_input.strip():
+        return "Please enter a valid message."
 
-    # Set a confidence threshold
-    CONFIDENCE_THRESHOLD = 0.2  # Adjust as needed
+    try:
+        cleaned_input = ' '.join(spacy_tokenizer(user_input))
+        user_input_processed = vectorizer.transform([cleaned_input])
+        predicted_probabilities = clf.predict_proba(user_input_processed)
+        predicted_tag = clf.predict(user_input_processed)[0]
+        max_proba = max(predicted_probabilities[0])
 
-    if max_proba < CONFIDENCE_THRESHOLD:
-        # Provide a default response
-        return "I'm sorry, I didn't quite understand that. Could you please rephrase or ask about admissions, courses, tuition, contact information, or campus life?"
+        if max_proba < CONFIDENCE_THRESHOLD:
+            return "I'm sorry, I didn't quite understand that. Could you please rephrase?"
 
-    for intent in intents:
-        if intent['tag'] == predicted_tag:
-            response = random.choice(intent['responses'])
-            return response
+        for intent in intents:
+            if intent['tag'] == predicted_tag:
+                return random.choice(intent['responses'])
+    except Exception as e:
+        return f"An error occurred: {e}"
 
-    # Failsafe default response
     return "I'm sorry, I didn't understand that. Could you please rephrase?"
 
+# Initialize chat history and message counter in session state
+def initialize_chat():
+    if 'initialized' not in st.session_state:
+        st.session_state.history = []
+        st.session_state.message_counter = 0  # Initialize message counter
+        # Initial chatbot greeting
+        initial_message = {
+            "message": "Hello! I'm your College Enquiry Chatbot. How can I assist you today?",
+            "is_user": False,
+            "key": f"message_{st.session_state.message_counter}"
+        }
+        st.session_state.history.append(initial_message)
+        st.session_state.message_counter += 1
+        st.session_state.initialized = True  # Mark initialization as done
+
+# Render chat messages with unique keys
+def render_chat():
+    for chat in st.session_state.history:
+        if chat["is_user"]:
+            message(chat["message"], is_user=True, key=chat["key"])
+        else:
+            message(chat["message"], is_user=False, key=chat["key"])
+
+# Main Streamlit app
 def main():
-    # Now call load_model() inside main()
+    # Load model components
     vectorizer, clf, intents = load_model()
 
-    # Apply custom CSS
+    # Custom CSS for chat UI
     st.markdown("""
         <style>
-        /* Container for the chat history */
+        /* Chat container styling */
         .chat-container {
-            max-height: 400px; /* Adjust the height as needed */
+            max-height: 600px; 
             overflow-y: auto;
-            padding: 10px;
+            padding: 20px;
             border: 1px solid #ccc;
-            background-color: #f9f9f9;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
-        /* Chat message bubbles */
+        /* User message styling */
         .user-message {
             background-color: #DCF8C6;
-            padding: 10px;
+            padding: 10px 15px;
             border-radius: 15px;
             margin-bottom: 10px;
             text-align: left;
             width: fit-content;
-            max-width: 70%;
+            max-width: 80%;
+            align-self: flex-end;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
+        /* Bot message styling */
         .bot-message {
             background-color: #E4E6EB;
-            padding: 10px;
+            padding: 10px 15px;
             border-radius: 15px;
             margin-bottom: 10px;
             text-align: left;
             width: fit-content;
-            max-width: 70%;
+            max-width: 80%;
+            align-self: flex-start;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         /* Scrollbar styling */
         .chat-container::-webkit-scrollbar {
@@ -91,51 +131,81 @@ def main():
             border-radius: 4px;
         }
         /* Input box styling */
-        .stTextInput > div > div > input {
+        .stTextInput>div>div>input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
             width: 100%;
+        }
+        /* Send button styling */
+        .stButton>button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .stButton>button:hover {
+            background-color: #45a049;
         }
         </style>
         """, unsafe_allow_html=True)
 
-    st.title("College Enquiry Chatbot")
-    st.write("Welcome! How can I assist you today?")
+    st.title("🎓 College Enquiry Chatbot")
+    st.write("Welcome! I'm here to assist you with any questions you might have about our college.")
 
-    if 'history' not in st.session_state:
-        st.session_state['history'] = []
+    # Initialize chat history
+    initialize_chat()
 
-    # Display conversation history in a container
-    chat_container = st.container()
+    # Create a placeholder for the chat messages
+    chat_placeholder = st.container()
 
-    # Use a form to handle user input
-    with st.form(key='chat_form', clear_on_submit=True):
-        user_input = st.text_input("Type your message here...", key='input')
-        submit_button = st.form_submit_button(label='Send')
+    # Input form for user message below the chat
+    with st.form(key="chat_form", clear_on_submit=True):
+        user_input = st.text_input("Type your message here...", key="user_input")
+        submit_button = st.form_submit_button(label="Send")
 
-    if submit_button and user_input:
+    # Handle user input
+    if submit_button and user_input.strip():
+        # Append the user's message to history with a unique key
+        user_message = {
+            "message": user_input,
+            "is_user": True,
+            "key": f"message_{st.session_state.message_counter}"
+        }
+        st.session_state.history.append(user_message)
+        st.session_state.message_counter += 1
+
+        # Generate the chatbot's response
         response = chatbot_response(user_input, vectorizer, clf, intents)
-        st.session_state.history.append({"message": user_input, "is_user": True})
-        st.session_state.history.append({"message": response, "is_user": False})
 
-    # Display conversation history with unique keys inside the chat container
-    with chat_container:
-        # Create a scrollable chat area
-        st.markdown("<div class='chat-container' id='chat-container'>", unsafe_allow_html=True)
+        # Append the chatbot's response to history with a unique key
+        bot_message = {
+            "message": response,
+            "is_user": False,
+            "key": f"message_{st.session_state.message_counter}"
+        }
+        st.session_state.history.append(bot_message)
+        st.session_state.message_counter += 1
 
-        for idx, chat in enumerate(st.session_state.history):
-            if chat["is_user"]:
-                message(chat["message"], is_user=True, key=f'user_{idx}')
-            else:
-                message(chat["message"], is_user=False, key=f'bot_{idx}')
+    # Render chat history
+    with chat_placeholder:
+        render_chat()
 
-        st.markdown("</div>", unsafe_allow_html=True)
-
-        # Add a script to auto-scroll to the bottom
-        st.markdown("""
-            <script>
-            const chatContainer = window.parent.document.getElementById('chat-container');
+    # Auto-scroll to the bottom of the chat container
+    st.markdown("""
+        <script>
+        const chatContainer = window.parent.document.querySelector('.chat-container');
+        if (chatContainer) {
             chatContainer.scrollTop = chatContainer.scrollHeight;
-            </script>
-            """, unsafe_allow_html=True)
+        }
+        </script>
+        """, unsafe_allow_html=True)
 
-if __name__ == '__main__':
+    # Optional: Debugging Aid (Remove or Comment Out in Production)
+    # st.write("Chat History:", st.session_state.history)
+
+if __name__ == "__main__":
     main()
