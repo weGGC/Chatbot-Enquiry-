@@ -16,7 +16,8 @@ st.set_page_config(
 # File paths and configuration
 script_dir = os.path.dirname(__file__)
 model_file = os.path.join(script_dir, '..', 'models', 'chatbot_model.pkl')
-CONFIDENCE_THRESHOLD = 0.1  # Minimum confidence for intent matching
+feedback_file = os.path.join(script_dir, 'feedback.txt')  # File to save feedback
+CONFIDENCE_THRESHOLD = 0.03  # Minimum confidence for intent matching
 
 # Load the trained model and intents
 @st.cache_resource(show_spinner=False)
@@ -80,192 +81,113 @@ def render_chat():
         else:
             message(chat["message"], is_user=False, key=chat["key"])
 
+# Save feedback to a file
+def save_feedback(feedback_text):
+    with open(feedback_file, 'a') as f:
+        f.write(feedback_text + "\n")
+
+# Load the three most recent feedback entries
+def load_recent_feedback():
+    if os.path.exists(feedback_file):
+        with open(feedback_file, 'r') as f:
+            feedback_list = f.readlines()
+        # Return the three most recent feedbacks
+        return feedback_list[-3:]
+    return []
+
 # Main Streamlit app
 def main():
     # Load model components
     vectorizer, clf, intents = load_model()
 
-    # Custom CSS for chat UI
-    st.markdown("""
-        <style>
-        /* Chat container styling */
-        .chat-container {
-            max-height: 600px; 
-            overflow-y: auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease-in-out;
-        }
-        .chat-container:hover {
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
-        /* User message styling */
-        .user-message {
-            background-color: #007ACC;
-            color: white;
-            padding: 15px;
-            border-radius: 25px;
-            margin-bottom: 10px;
-            text-align: left;
-            width: fit-content;
-            max-width: 75%;
-            align-self: flex-end;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-            position: relative;
-        }
-        .user-message:after {
-            content: "👤";
-            position: absolute;
-            top: -30px;
-            right: -10px;
-            font-size: 25px;
-            animation: bounce 1s infinite;
-        }
-        .user-message:hover {
-            transform: scale(1.05);
-        }
-        /* Bot message styling */
-        .bot-message {
-            background-color: #f0f0f0;
-            color: #333;
-            padding: 15px;
-            border-radius: 25px;
-            margin-bottom: 10px;
-            text-align: left;
-            width: fit-content;
-            max-width: 75%;
-            align-self: flex-start;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-            position: relative;
-        }
-        .bot-message:after {
-            content: "🤖";
-            position: absolute;
-            top: -30px;
-            left: -10px;
-            font-size: 25px;
-            animation: shake 1s infinite;
-        }
-        .bot-message:hover {
-            transform: scale(1.05);
-        }
-        /* Scrollbar styling */
-        .chat-container::-webkit-scrollbar {
-            width: 8px;
-        }
-        .chat-container::-webkit-scrollbar-thumb {
-            background-color: #cccccc;
-            border-radius: 10px;
-        }
-        /* Input box styling */
+    # Add navigation bar
+    st.sidebar.title("Navigation")
+    nav_option = st.sidebar.radio("Go to", ("Home", "Chatbot", "Feedback", "About Us"))
 
-        .stTextInput>div>div>input:focus {
-            border-color: #007ACC;
-        }
-        /* Send button styling */
-        .stButton>button {
-            background-color: #007ACC;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-            transition: background-color 0.3s ease, transform 0.2s;
-        }
-        .stButton>button:hover {
-            background-color: #005f99;
-            transform: scale(1.05);
-        }
-        /* Keyframes for animations */
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0); 
+    # Handle navigation
+    if nav_option == "Home":
+        st.title("Welcome to SGI College Enquiry System")
+        st.write("This platform is designed to assist students with any queries they may have about the college.")
+        st.write("For more information about our college, visit [SGI Official Website](https://www.sgi.ac.in)")
+
+    elif nav_option == "Chatbot":
+        st.title("🎓 SGI Chatbot")
+        st.write("Welcome! I'm here to assist you with any questions you might have about our college.")
+
+        # Initialize chat history
+        initialize_chat()
+
+        # Create a placeholder for the chat messages
+        chat_placeholder = st.container()
+
+        # Input form for user message below the chat
+        with st.form(key="chat_form", clear_on_submit=True):
+            user_input = st.text_input("Type your message here...", key="user_input")
+            submit_button = st.form_submit_button(label="Send")
+
+        # Handle user input
+        if submit_button and user_input.strip():
+            # Append the user's message to history with a unique key
+            user_message = {
+                "message": user_input,
+                "is_user": True,
+                "key": f"message_{st.session_state.message_counter}"
             }
-            40% {
-                transform: translateY(-10px);
+            st.session_state.history.append(user_message)
+            st.session_state.message_counter += 1
+
+            # Generate the chatbot's response
+            response = chatbot_response(user_input, vectorizer, clf, intents)
+
+            # Append the chatbot's response to history with a unique key
+            bot_message = {
+                "message": response,
+                "is_user": False,
+                "key": f"message_{st.session_state.message_counter}"
             }
-            60% {
-                transform: translateY(-5px);
+            st.session_state.history.append(bot_message)
+            st.session_state.message_counter += 1
+
+        # Render chat history
+        with chat_placeholder:
+            render_chat()
+
+        # Auto-scroll to the bottom of the chat container
+        st.markdown("""
+            <script>
+            const chatContainer = window.parent.document.querySelector('.chat-container');
+            if (chatContainer) {
+                chatContainer.scrollTop = chatContainer.scrollHeight;
             }
-        }
-        @keyframes shake {
-            0%, 100% {
-                transform: rotate(0deg);
-            }
-            25% {
-                transform: rotate(2deg);
-            }
-            50% {
-                transform: rotate(-2deg);
-            }
-            75% {
-                transform: rotate(2deg);
-            }
-        }
-        </style>
-        """, unsafe_allow_html=True)
+            </script>
+            """, unsafe_allow_html=True)
 
-    st.title("🎓 SGI Chatbot")
-    st.write("Welcome! I'm here to assist you with any questions you might have about our college.")
+    elif nav_option == "Feedback":
+        st.title("Feedback")
+        st.write("We value your feedback. Please share your thoughts about your experience.")
 
-    # Initialize chat history
-    initialize_chat()
+        # Feedback form
+        with st.form(key="feedback_form"):
+            feedback_text = st.text_area("Your feedback", key="feedback_input")
+            submit_feedback = st.form_submit_button(label="Submit Feedback")
 
-    # Create a placeholder for the chat messages
-    chat_placeholder = st.container()
+        if submit_feedback and feedback_text.strip():
+            save_feedback(feedback_text)
+            st.success("Thank you for your feedback!")
 
-    # Input form for user message below the chat
-    with st.form(key="chat_form", clear_on_submit=True):
-        user_input = st.text_input("Type your message here...", key="user_input")
-        submit_button = st.form_submit_button(label="Send")
+        # Display the three most recent feedbacks
+        st.subheader("Recent Feedback")
+        recent_feedback = load_recent_feedback()
+        if recent_feedback:
+            for fb in recent_feedback:
+                st.write(f"- {fb.strip()}")
+        else:
+            st.write("No feedback available yet.")
 
-    # Handle user input
-    if submit_button and user_input.strip():
-        # Append the user's message to history with a unique key
-        user_message = {
-            "message": user_input,
-            "is_user": True,
-            "key": f"message_{st.session_state.message_counter}"
-        }
-        st.session_state.history.append(user_message)
-        st.session_state.message_counter += 1
-
-        # Generate the chatbot's response
-        response = chatbot_response(user_input, vectorizer, clf, intents)
-
-        # Append the chatbot's response to history with a unique key
-        bot_message = {
-            "message": response,
-            "is_user": False,
-            "key": f"message_{st.session_state.message_counter}"
-        }
-        st.session_state.history.append(bot_message)
-        st.session_state.message_counter += 1
-
-    # Render chat history
-    with chat_placeholder:
-        render_chat()
-
-    # Auto-scroll to the bottom of the chat container
-    st.markdown("""
-        <script>
-        const chatContainer = window.parent.document.querySelector('.chat-container');
-        if (chatContainer) {
-            chatContainer.scrollTop = chatContainer.scrollHeight;
-        }
-        </script>
-        """, unsafe_allow_html=True)
-
-    # Optional: Debugging Aid (Remove or Comment Out in Production)
-    # st.write("Chat History:", st.session_state.history)
+    elif nav_option == "About Us":
+        st.title("About Us")
+        st.write("SGI is a reputed educational institution dedicated to providing quality education to students.")
+        st.write("We offer a variety of courses in different fields to help students excel in their career paths.")
 
 if __name__ == "__main__":
     main()

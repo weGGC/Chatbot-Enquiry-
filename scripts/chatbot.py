@@ -75,7 +75,7 @@ def chatbot_response(user_input):
         print(f"Predicted Tag: {predicted_tag}, Confidence: {max_proba}")
 
         # Set a confidence threshold
-        CONFIDENCE_THRESHOLD = 0.1
+        CONFIDENCE_THRESHOLD = 0.03
         if max_proba < CONFIDENCE_THRESHOLD:
             return "I'm not sure I understand. Could you rephrase or ask about another topic?"
 
