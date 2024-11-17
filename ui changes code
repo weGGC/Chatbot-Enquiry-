@@ -17,7 +17,6 @@ st.set_page_config(
 script_dir = os.path.dirname(__file__)
 model_file = os.path.join(script_dir, '..', 'models', 'chatbot_model.pkl')
 feedback_file = os.path.join(script_dir, 'feedback.txt')  # File to save feedback
-notice_file = os.path.join(script_dir, 'notice.txt')  # File to save notices
 CONFIDENCE_THRESHOLD = 0.03  # Minimum confidence for intent matching
 
 # Load the trained model and intents
@@ -96,18 +95,6 @@ def load_recent_feedback():
         return feedback_list[-3:]
     return []
 
-# Save notice to a file
-def save_notice(notice_text):
-    with open(notice_file, 'w') as f:
-        f.write(notice_text)
-
-# Load notice
-def load_notice():
-    if os.path.exists(notice_file):
-        with open(notice_file, 'r') as f:
-            return f.read()
-    return "No notices available."
-
 # Utility: Apply CSS globally
 def apply_css():
     st.markdown(
@@ -179,24 +166,6 @@ def render_about():
     st.write("SGI is a reputed educational institution dedicated to providing quality education to students.")
     st.write("We offer a variety of courses in different fields to help students excel in their career paths.")
 
-def render_notice():
-    st.title("Notice Board")
-    user_type = st.radio("Select User Type", ("User", "Admin"), key="user_type")
-
-    if user_type == "Admin":
-        admin_password = st.text_input("Enter Admin Password", type="password", key="admin_password")
-        if admin_password == "admin123":  # Example password, replace with a secure authentication method
-            new_notice = st.text_area("Set Notice", key="notice_input")
-            if st.button("Submit Notice", key="submit_notice"):
-                save_notice(new_notice)
-                st.success("Notice updated successfully!")
-        else:
-            st.warning("Incorrect password. Please try again.")
-    else:
-        notice = load_notice()
-        st.write("### Current Notice")
-        st.write(notice)
-
 # Main Streamlit app
 def main():
     apply_css()
@@ -213,8 +182,6 @@ def main():
             st.session_state.nav_option = "Feedback"
         if st.button("About Us", key="about_button"):
             st.session_state.nav_option = "About Us"
-        if st.button("Notice Board", key="notice_button"):
-            st.session_state.nav_option = "Notice Board"
 
     if 'nav_option' not in st.session_state:
         st.session_state.nav_option = "Chatbot"
@@ -256,8 +223,6 @@ def main():
         render_feedback()
     elif nav_option == "About Us":
         render_about()
-    elif nav_option == "Notice Board":
-        render_notice()
 
 if __name__ == "__main__":
     main()
