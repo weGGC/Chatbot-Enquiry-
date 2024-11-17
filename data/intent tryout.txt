@@ -1,0 +1,194 @@
+[
+    {
+        "tag": "institution_overview",
+        "patterns": [
+            "Tell me about Sanjay Ghodawat Polytechnic",
+            "What is SGP?",
+            "Overview of your institution",
+            "Can you provide information about your college?",
+            "What makes SGP unique?",
+            "What does Sanjay Ghodawat Polytechnic specialize in?"
+        ],
+        "responses": [
+            "Sanjay Ghodawat Polytechnic (SGP) is a premier technical institution that offers diploma programs in various engineering disciplines. Our institution is committed to delivering high-quality education, fostering innovation, and nurturing talent to prepare students for successful careers.",
+            "SGP is renowned for its state-of-the-art infrastructure, experienced faculty, and a holistic approach to education. We emphasize practical learning and provide opportunities for industry exposure and personal development.",
+            "At SGP, we believe in creating a learning environment that inspires students to excel academically while developing the skills necessary for a global workforce. Visit our website for more information: https://sgipolytechnic.in/#/"
+        ]
+    },
+    {
+        "tag": "first_year_department",
+        "patterns": [
+            "What is the First Year Department?",
+            "Tell me about the First Year Department",
+            "Overview of the First Year Department",
+            "What departments are available for first-year students?",
+            "What courses are offered in the first year?",
+            "How does the first-year curriculum work?"
+        ],
+        "responses": [
+            "The First Year Department at SGP is designed to provide students with a strong foundation in engineering principles and essential technical skills. This department focuses on developing core competencies in mathematics, physics, chemistry, and basic engineering subjects.",
+            "Our First Year Department serves as a gateway for students to transition from school to a technical education environment, ensuring they are well-prepared for advanced studies in their chosen field.",
+            "The curriculum includes comprehensive coursework, practical lab sessions, and hands-on projects to enhance problem-solving and critical thinking skills. Learn more about our First Year Department here: https://sgipolytechnic.in/#/department/fy"
+        ]
+    },
+    {
+        "tag": "first_year_hod_message",
+        "patterns": [
+            "Message from the First Year HOD",
+            "What does the First Year HOD say?",
+            "First Year Department HOD's message",
+            "Can I read the HOD's message for first-year students?",
+            "What advice does the First Year HOD provide?"
+        ],
+        "responses": [
+            "The Head of the First Year Department emphasizes the importance of laying a solid foundation for future learning. The message encourages students to adopt a proactive learning approach, seek guidance when needed, and participate in extracurricular activities for holistic development.",
+            "The HOD's message highlights the department's commitment to nurturing curiosity and innovation among first-year students, setting the stage for a successful academic journey.",
+            "To read the complete message from the First Year HOD, please visit: https://sgipolytechnic.in/#/department/fy/hoddesk"
+        ]
+    },
+    {
+        "tag": "cse_department",
+        "patterns": [
+            "Tell me about the Computer Science Department",
+            "What is the CSE Department?",
+            "Overview of the Computer Science Engineering Department",
+            "What courses are offered in the CSE Department?",
+            "What is the focus of the Computer Science Department?",
+            "Opportunities in the CSE program"
+        ],
+        "responses": [
+            "The Computer Science and Engineering (CSE) Department at SGP is dedicated to equipping students with knowledge and skills in cutting-edge technologies like artificial intelligence, machine learning, data science, and software development.",
+            "Our CSE Department emphasizes a balance between theoretical concepts and practical applications through project-based learning, industry internships, and hands-on labs.",
+            "The department offers a curriculum that includes programming, algorithm design, database management, networking, and emerging technologies, preparing students for dynamic careers in tech. For more details, visit: https://sgipolytechnic.in/#/department/cse"
+        ]
+    },
+    {
+        "tag": "cse_hod_message",
+        "patterns": [
+            "Message from the CSE HOD",
+            "What does the CSE HOD say?",
+            "Computer Science Department HOD's message",
+            "Can I read the HOD's message for CSE students?",
+            "What are the CSE HOD's insights?"
+        ],
+        "responses": [
+            "The Head of the Computer Science Department shares a vision of creating industry-ready professionals who are well-versed in the latest technologies. The message underlines the importance of research, innovation, and ethics in shaping a student's career.",
+            "The CSE HOD's message inspires students to embrace learning as a continuous process, highlighting the department's focus on fostering creativity and technical expertise.",
+            "To explore the HOD's complete message and guidance, visit: https://sgipolytechnic.in/#/department/cse/hoddesk"
+        ]
+    },
+    {
+        "tag": "cse_vision_mission",
+        "patterns": [
+            "What is the vision and mission of the CSE Department?",
+            "CSE Department's vision and mission",
+            "Goals of the Computer Science Department",
+            "What are the objectives of the CSE Department?",
+            "What does the CSE Department aim to achieve?"
+        ],
+        "responses": [
+            "The vision of the CSE Department is to excel in the field of computer science and engineering by fostering innovation, research, and ethical practices among students.",
+            "The mission includes providing a comprehensive education that blends theory with practical applications, encouraging lifelong learning, and contributing to technological advancements for societal benefit.",
+            "To learn more about the detailed vision and mission of the department, visit: https://sgipolytechnic.in/#/department/cse/vision-mission"
+        ]
+    },
+    {
+        "tag": "cse_academic_calendar",
+        "patterns": [
+            "What is the academic calendar for the CSE Department?",
+            "CSE Department's academic schedule",
+            "Important dates for CSE students",
+            "Where can I find the CSE academic calendar?",
+            "Schedule for the CSE Department"
+        ],
+        "responses": [
+            "The academic calendar for the CSE Department includes details such as semester start and end dates, examination schedules, holidays, and other academic activities.",
+            "Students can use the academic calendar to plan their studies and stay informed about key academic milestones throughout the semester.",
+            "The full academic calendar is available here: https://sgipolytechnic.in/#/department/cse/academic-calender"
+        ]
+    },
+        {
+        "tag": "admission_process",
+        "patterns": [
+            "How can I apply for admission?",
+            "What is the admission procedure?",
+            "Steps to enroll in your programs",
+            "Guide me through the application process"
+        ],
+        "responses": [
+            "To apply for admission, please visit our Admissions page at https://sgipolytechnic.in/#/admissions. You'll find detailed information on eligibility criteria, required documents, and the application form.",
+            "Our admission process involves submitting an online application, providing necessary academic documents, and attending a counseling session. For more details, refer to our Admissions section on the website.",
+            "You can start your application by visiting https://sgipolytechnic.in/#/admissions. Ensure you meet the eligibility requirements and have all the necessary documents ready."
+        ]
+    },
+    {
+        "tag": "placement_officer_contact",
+        "patterns": [
+            "Who is the placement officer?",
+            "How can I contact the placement cell?",
+            "Placement officer's contact details",
+            "Get in touch with the placement department"
+        ],
+        "responses": [
+            "Our Training and Placement Officer is Mr. [Name]. You can reach him via email at tpo@sgipolytechnic.in or call at [Phone Number].",
+            "For placement-related queries, please contact our Placement Officer, Mr. [Name], at tpo@sgipolytechnic.in or [Phone Number].",
+            "To get in touch with the placement cell, email tpo@sgipolytechnic.in or call [Phone Number]. Our Placement Officer, Mr. [Name], will assist you."
+        ]
+    },
+    {
+        "tag": "placement_statistics",
+        "patterns": [
+            "What are the recent placement statistics?",
+            "Placement success rate",
+            "Companies visiting for placements",
+            "Average salary packages offered"
+        ],
+        "responses": [
+            "In the recent academic year, over 80% of our students secured placements with reputed companies. The average salary package offered was around ₹3.25 LPA, with the highest package reaching ₹26 LPA. :contentReference[oaicite:0]{index=0}",
+            "Our placement cell has successfully facilitated placements for a significant number of students, with top recruiters like TCS, Capgemini, and L&T Infotech participating in the campus drives. :contentReference[oaicite:1]{index=1}",
+            "We have a strong placement record, with numerous companies visiting our campus annually. Detailed placement reports are available on our website."
+        ]
+    },
+    {
+        "tag": "hostel_accommodation",
+        "patterns": [
+            "Tell me about the hostel facilities",
+            "Is on-campus accommodation available?",
+            "Hostel amenities provided",
+            "Living conditions in the hostels"
+        ],
+        "responses": [
+            "Our campus offers separate hostel facilities for male and female students, equipped with spacious rooms, Wi-Fi connectivity, 24/7 security, and recreational areas. :contentReference[oaicite:2]{index=2}",
+            "Yes, we provide on-campus accommodation with amenities such as hygienic dining facilities, laundry services, and common rooms for socializing.",
+            "The hostels are designed to provide a comfortable living environment, ensuring students have access to all necessary facilities for a conducive stay."
+        ]
+    },
+    {
+        "tag": "food_court_details",
+        "patterns": [
+            "What options are available in the food court?",
+            "Tell me about the campus dining facilities",
+            "Types of cuisine offered in the cafeteria",
+            "Is there a canteen on campus?"
+        ],
+        "responses": [
+            "Our campus features a food court offering a variety of cuisines, including vegetarian and non-vegetarian options, to cater to diverse tastes. :contentReference[oaicite:3]{index=3}",
+            "The dining facilities provide hygienic and nutritious meals, with multiple food stalls serving different regional and international dishes.",
+            "Yes, we have a well-maintained canteen on campus that operates from 8 AM to 8 PM, ensuring students have access to meals and snacks throughout the day."
+        ]
+    },
+    {
+        "tag": "institution_vision",
+        "patterns": [
+            "What is the vision of your institution?",
+            "Tell me about your mission and vision",
+            "Institutional goals and objectives",
+            "Core values of the college"
+        ],
+        "responses": [
+            "Our vision is to be a leading institution in technical education, fostering innovation, research, and holistic development of students to meet global standards.",
+            "We aim to provide quality education, promote research and development, and instill ethical values in our students to prepare them for the challenges of the industry.",
+            "Our core values include integrity, excellence, inclusivity, and a commitment to continuous improvement in all aspects of education and administration."
+        ]
+    }
+]

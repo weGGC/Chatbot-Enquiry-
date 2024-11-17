@@ -75,7 +75,7 @@ def chatbot_response(user_input):
         print(f"Predicted Tag: {predicted_tag}, Confidence: {max_proba}")
 
         # Set a confidence threshold
-        CONFIDENCE_THRESHOLD = 0.03
+        CONFIDENCE_THRESHOLD = 0.025
         if max_proba < CONFIDENCE_THRESHOLD:
             return "I'm not sure I understand. Could you rephrase or ask about another topic?"
 
@@ -85,7 +85,7 @@ def chatbot_response(user_input):
 
     except Exception as e:
         print(f"Error during response generation: {e}")
-        return "An error occurred while processing your message. Please try again later."
+        return "I'm not sure I understand. Could you rephrase or ask about another topic?"
 
     # Failsafe response
     return "I'm sorry, I couldn't process that. Can you try again?"

@@ -1,0 +1,672 @@
+[
+    {
+        "tag": "course_details",
+        "patterns": [
+            "What courses do you offer?",
+            "Tell me about your diploma programs",
+            "Which branches are available?",
+            "Can you provide details about your courses?"
+        ],
+        "responses": [
+            "We offer diploma programs in Civil Engineering, Mechanical Engineering, Electrical Engineering, Computer Science, and Information Technology. Each program is designed to provide comprehensive knowledge and practical skills.",
+            "Our courses include a mix of theoretical and hands-on training to ensure students are industry-ready upon graduation. For detailed curriculum, please visit our website.",
+            "We have a diverse range of branches catering to various technical fields. Let me know if you need information on a specific course."
+        ]
+    },
+    {
+        "tag": "fee_structure",
+        "patterns": [
+            "What is the fee structure?",
+            "How much does it cost to enroll?",
+            "Can you provide information on tuition fees?",
+            "What are the admission fees?"
+        ],
+        "responses": [
+            "Our fee structure varies by program. For detailed information on tuition fees, please visit the Fees section on our website or contact our admissions office.",
+            "The total cost of enrollment depends on the course you choose. We offer various payment options and installment plans to assist students.",
+            "Admission fees and tuition costs are outlined on our website. Feel free to reach out for a detailed breakdown."
+        ]
+    },
+    {
+        "tag": "scholarship_info",
+        "patterns": [
+            "Do you offer scholarships?",
+            "What scholarships are available?",
+            "How can I apply for a scholarship?",
+            "Are there any financial aids?"
+        ],
+        "responses": [
+            "Yes, we offer several scholarships based on academic performance, financial need, and extracurricular achievements. You can find more details on our Scholarships page.",
+            "Scholarships are available for meritorious and deserving students. Please visit our website or contact the financial aid office for application procedures.",
+            "We provide financial assistance through various scholarship programs. Let us know if you need help with the application process."
+        ]
+    },
+    {
+        "tag": "campus_life",
+        "patterns": [
+            "What is campus life like?",
+            "Tell me about student activities",
+            "Do you have clubs and societies?",
+            "What extracurricular activities are available?"
+        ],
+        "responses": [
+            "Campus life at Sanjay Ghodawat Polytechnic is vibrant with numerous student clubs, cultural events, technical fests, and sports activities. We encourage students to participate and develop their interests.",
+            "We host various events throughout the year, including workshops, seminars, and competitions. There's always something exciting happening on campus!",
+            "Yes, we have a variety of clubs and societies ranging from technical groups to cultural and sports clubs, providing ample opportunities for personal growth."
+        ]
+    },
+    {
+        "tag": "hostel_facilities",
+        "patterns": [
+            "Do you have hostel facilities?",
+            "Tell me about the hostels",
+            "Is accommodation available?",
+            "Can I stay on campus?"
+        ],
+        "responses": [
+            "Yes, we offer comfortable and secure hostel facilities for both male and female students. Our hostels are equipped with all necessary amenities to ensure a pleasant stay.",
+            "Our on-campus hostels provide spacious rooms, 24/7 security, Wi-Fi, and recreational areas. We strive to create a home-like environment for our students.",
+            "Accommodation is available on campus with options for single and shared rooms. Please contact our admissions office for more details and availability."
+        ]
+    },
+    {
+        "tag": "student_support",
+        "patterns": [
+            "What student support services do you offer?",
+            "Do you have counseling services?",
+            "How can I get academic help?",
+            "Tell me about career guidance"
+        ],
+        "responses": [
+            "We offer a range of student support services including academic counseling, career guidance, mental health counseling, and peer mentoring programs to help students succeed.",
+            "Our counseling services are available to assist students with personal, academic, and career-related challenges. Feel free to reach out to our support team.",
+            "We provide academic support through tutoring, workshops, and study groups. Additionally, our career center offers guidance on internships and job placements."
+        ]
+    },
+    {
+        "tag": "alumni_network",
+        "patterns": [
+            "Do you have an alumni network?",
+            "How can I connect with alumni?",
+            "Tell me about your alumni",
+            "Are there alumni events?"
+        ],
+        "responses": [
+            "Yes, we have a strong alumni network that actively participates in mentoring current students, providing career opportunities, and organizing events.",
+            "You can connect with our alumni through our official alumni portal or by attending our alumni meetups and networking events.",
+            "Our alumni have excelled in various fields and frequently contribute to our institution by sharing their experiences and expertise."
+        ]
+    },
+    {
+        "tag": "events_calendar",
+        "patterns": [
+            "What events are happening soon?",
+            "Tell me about upcoming events",
+            "Do you have any events this month?",
+            "Where can I find your events schedule?"
+        ],
+        "responses": [
+            "We have several exciting events coming up, including technical workshops, cultural festivals, and guest lectures. Please check our Events page for the latest schedule.",
+            "Upcoming events include the Annual Tech Fest, Sports Day, and Career Counseling Sessions. Stay tuned to our website for detailed information.",
+            "Our events calendar is regularly updated on our website. You can also subscribe to our newsletter to receive updates directly."
+        ]
+    },
+    {
+        "tag": "faculty_info",
+        "patterns": [
+            "Tell me about your faculty",
+            "Who are the professors?",
+            "Can I get information about the teachers?",
+            "What qualifications do your instructors have?"
+        ],
+        "responses": [
+            "Our faculty consists of highly qualified and experienced professionals dedicated to providing quality education and mentorship to our students.",
+            "We have a team of experts in each department with advanced degrees and industry experience. You can view detailed profiles on our website.",
+            "Our instructors hold Master's and Ph.D. degrees in their respective fields and are actively involved in research and industry projects."
+        ]
+    },
+    {
+        "tag": "application_deadline",
+        "patterns": [
+            "When is the application deadline?",
+            "What is the last date to apply?",
+            "Deadline for admissions",
+            "When should I submit my application?"
+        ],
+        "responses": [
+            "The application deadline for the upcoming academic session is [Insert Deadline Date]. Please ensure you submit all required documents by then. https://sgipolytechnic.in/#/department/cse",
+            "Applications close on [Insert Deadline Date]. We encourage you to apply early to avoid any last-minute issues. https://sgipolytechnic.in/#/department/cse ",
+            "For the most accurate and updated deadlines, please visit our Admissions page or contact our admissions office directly. https://sgipolytechnic.in/#/department/cse"
+        ]
+    },
+    {
+        "tag": "international_students",
+        "patterns": [
+            "Do you accept international students?",
+            "What are the requirements for international applicants?",
+            "Tell me about studying abroad here",
+            "Can international students apply?"
+        ],
+        "responses": [
+            "Yes, we welcome international students. You will need to provide your academic transcripts, passport, and meet the eligibility criteria for your chosen program.",
+            "International applicants must submit their academic records, proof of English proficiency, and obtain the necessary visa documentation. Please contact our international office for more details.",
+            "We provide support to international students through orientation programs, housing assistance, and dedicated staff to help you settle in."
+        ]
+    },
+    {
+        "tag": "online_learning",
+        "patterns": [
+            "Do you offer online courses?",
+            "Is there e-learning available?",
+            "Can I study remotely?",
+            "Tell me about your online programs"
+        ],
+        "responses": [
+            "Yes, we offer a range of online courses and hybrid learning options to accommodate different learning preferences and schedules.",
+            "Our e-learning platform provides access to course materials, lectures, and interactive sessions to ensure a comprehensive learning experience.",
+            "You can enroll in our online programs which are designed to be flexible and accessible from anywhere. Visit our Online Learning page for more information."
+        ]
+    },
+    {
+        "tag": "curriculum_details",
+        "patterns": [
+            "Can you provide the curriculum?",
+            "What subjects are covered in the course?",
+            "Tell me about the syllabus",
+            "What is the academic structure?"
+        ],
+        "responses": [
+            "Our curriculum is designed to provide a balanced mix of theoretical knowledge and practical skills. You can view detailed syllabi for each course on our website.",
+            "Each program covers core subjects relevant to the field, along with elective courses that allow students to specialize in areas of interest.",
+            "The academic structure includes semesters with periodic assessments, practical labs, internships, and project work to ensure comprehensive learning."
+        ]
+    },
+    {
+        "tag": "faq",
+        "patterns": [
+            "Do you have a FAQ section?",
+            "Where can I find frequently asked questions?",
+            "Tell me about your FAQs",
+            "Common questions and answers"
+        ],
+        "responses": [
+            "Yes, we have a comprehensive FAQ section on our website that addresses common queries about admissions, courses, facilities, and more.",
+            "You can visit our FAQ page to find answers to frequently asked questions. If you don't find what you're looking for, feel free to ask me!",
+            "Our FAQs cover a wide range of topics to help you get the information you need quickly. Check them out on our website."
+        ]
+    },
+    {
+        "tag": "internships",
+        "patterns": [
+            "Do you offer internship opportunities?",
+            "How can I apply for an internship?",
+            "Tell me about internships",
+            "Where can I find internship programs?"
+        ],
+        "responses": [
+            "We collaborate with numerous companies to provide internship opportunities for our students. You can apply through our placement cell or visit our internships page for more details.",
+            "To apply for an internship, ensure your profile is updated with the placement cell and attend our internship fairs and workshops.",
+            "Internship programs are available across various departments. Contact your department coordinator or the placement office for more information."
+        ]
+    },
+    {
+        "tag": "technical_support",
+        "patterns": [
+            "I need technical support",
+            "Help with the website",
+            "Technical issues",
+            "Can't access my account"
+        ],
+        "responses": [
+            "I'm sorry you're experiencing issues. Please contact our technical support team at support@sgipolytechnic.in or call us at 123-456-7890 for immediate assistance.",
+            "For website-related problems, try clearing your browser cache or using a different browser. If the issue persists, reach out to our tech support.",
+            "Our technical support team is here to help you. Please provide details of the issue you're facing, and we'll assist you promptly."
+        ]
+    },
+    {
+        "tag": "language_support",
+        "patterns": [
+            "Do you offer courses in other languages?",
+            "Is instruction available in English?",
+            "Language options for courses",
+            "Can I study in Hindi?"
+        ],
+        "responses": [
+            "All our courses are primarily taught in English to ensure students are well-prepared for the global industry standards.",
+            "While the main medium of instruction is English, we also provide support in other languages as needed. Please contact us for specific language support.",
+            "English is the primary language for instruction, but we offer additional language support services to assist students who need it."
+        ]
+    },
+    {
+        "tag": "transportation",
+        "patterns": [
+            "Is there transportation available?",
+            "Do you provide shuttle services?"
+        ],
+        "responses": [
+            "Our campus is located in Atigre, Kolhapur. You can reach us by bus, train, or taxi. We also provide shuttle services from key points in the city.",
+            "Yes, we offer shuttle services for students commuting from various parts of Kolhapur. Please check the Transportation section on our website for schedules.",
+            "Public transportation options like buses and trains are available to Atigre, Kolhapur. For more convenience, you can use our campus shuttle services."
+        ]
+    },
+    {
+        "tag": "library_services",
+        "patterns": [
+            "Tell me about the library",
+            "Do you have online library access?",
+            "Library hours",
+            "Can I borrow books?"
+        ],
+        "responses": [
+            "Our library is well-stocked with a vast collection of books, journals, and digital resources. It is open from 8 AM to 8 PM on weekdays and 10 AM to 6 PM on weekends.",
+            "Yes, we provide online library access where you can search for and access digital resources, e-books, and research papers.",
+            "Students can borrow books by presenting their student ID at the library. The borrowing period is two weeks, with the option to renew if no reservations are pending."
+        ]
+    },
+    {
+        "tag": "health_services",
+        "patterns": [
+            "Do you have a health center?",
+            "Tell me about medical facilities",
+            "Is there a doctor on campus?",
+            "Healthcare services available"
+        ],
+        "responses": [
+            "Yes, we have an on-campus health center staffed with qualified medical professionals to attend to students' health needs.",
+            "Our health center provides basic medical services, emergency care, and regular health check-ups to ensure the well-being of our students.",
+            "We offer comprehensive healthcare services, including first aid, consultations, and referrals to specialized medical facilities when needed."
+        ]
+    },
+    {
+        "tag": "food_cafeteria",
+        "patterns": [
+            "Tell me about the cafeteria",
+            "Do you have food services?",
+            "Where can I eat on campus?",
+            "Cafeteria timings"
+        ],
+        "responses": [
+            "Our campus cafeteria offers a variety of delicious and nutritious meals, including vegetarian and non-vegetarian options. It's open from 8 AM to 8 PM.",
+            "Yes, we have food services available in the cafeteria, which provides a range of snacks, beverages, and full meals to cater to all tastes.",
+            "You can enjoy meals at our cafeteria located centrally on campus. The cafeteria operates daily from 8 AM to 8 PM."
+        ]
+    },
+    {
+        "tag": "sports_facilities",
+        "patterns": [
+            "Do you have sports facilities?",
+            "Tell me about your sports programs",
+            "What sports can I play here?",
+            "Are there any sports teams?"
+        ],
+        "responses": [
+            "Yes, we offer excellent sports facilities including cricket, football, basketball courts, a gymnasium, and a swimming pool.",
+            "Our sports programs include various competitive and recreational activities. We have teams that participate in inter-college tournaments.",
+            "Students can engage in multiple sports such as cricket, football, badminton, and more. We encourage participation to promote a healthy lifestyle."
+        ]
+    },
+    {
+        "tag": "technology_resources",
+        "patterns": [
+            "What technology resources are available?",
+            "Do you have computer labs?",
+            "Tell me about your IT facilities",
+            "Access to software and hardware"
+        ],
+        "responses": [
+            "We have multiple computer labs equipped with the latest software and high-speed internet to support your academic and project needs.",
+            "Our IT facilities include advanced hardware setups, specialized software for various courses, and 24/7 access to ensure you have the resources you need.",
+            "Students have access to state-of-the-art technology resources, including high-performance computers, software licenses, and technical support."
+        ]
+    },
+    {
+        "tag": "career_fairs",
+        "patterns": [
+            "Do you organize career fairs?",
+            "Tell me about your career events",
+            "When is the next career fair?",
+            "Career fair schedule",
+            "placements and job"
+        ],
+        "responses": [
+            "Yes, we organize career fairs annually where leading companies come to recruit our students. These events provide great networking and job opportunities.",
+            "Our career events include job fairs, resume workshops, and interview preparation sessions to help you prepare for the job market.",
+            "The next career fair is scheduled for [Insert Date]. Stay tuned to our Events page for updates and registration details."
+        ]
+    },
+    {
+        "tag": "projects",
+        "patterns": [
+            "Tell me about student projects",
+            "Do you have project-based learning?",
+            "What kind of projects do students work on?",
+            "Student project showcase"
+        ],
+        "responses": [
+            "Our curriculum emphasizes project-based learning where students work on real-world projects, fostering practical skills and innovation.",
+            "Students engage in various projects ranging from software development, mechanical designs, electrical systems, to civil engineering structures.",
+            "We regularly showcase student projects in our annual exhibitions, highlighting their creativity and technical expertise."
+        ]
+    },
+    {
+        "tag": "library_membership",
+        "patterns": [
+            "How can I become a library member?",
+            "Do I need a membership for the library?",
+            "Register for the library",
+            "Library membership process"
+        ],
+        "responses": [
+            "All enrolled students are automatically members of our library. You can access library resources using your student ID.",
+            "Yes, library membership is granted upon enrollment. If you need additional assistance, please visit the library help desk.",
+            "To register for library services, simply present your student ID at the library reception. You'll receive a library card for accessing resources."
+        ]
+    },
+    {
+        "tag": "internship_support",
+        "patterns": [
+            "How do you support internships?",
+            "Do you help with internship placements?",
+            "Internship guidance",
+            "Assistance with finding internships"
+        ],
+        "responses": [
+            "Our placement cell actively assists students in finding suitable internships by partnering with various industries and organizing internship drives.",
+            "We provide guidance on resume building, interview preparation, and connecting you with companies offering internship opportunities.",
+            "Students receive personalized support from our career advisors to secure internships that align with their career goals."
+        ]
+    },
+    {
+        "tag": "extracurricular_activities",
+        "patterns": [
+            "What extracurricular activities are available?",
+            "Do you have any clubs?",
+            "Tell me about student organizations",
+            "Activities outside of academics"
+        ],
+        "responses": [
+            "We offer a wide range of extracurricular activities including cultural clubs, technical societies, sports teams, and volunteer groups to help you develop holistically.",
+            "Our student organizations cater to various interests such as robotics, music, dance, literature, and social service, providing ample opportunities for involvement.",
+            "Engage in activities like coding clubs, drama societies, sports leagues, and more to enhance your skills and make the most of your college life."
+        ]
+    },
+    {
+        "tag": "event_registration",
+        "patterns": [
+            "How can I register for an event?",
+            "Tell me how to sign up for events",
+            "Event registration process",
+            "Register for upcoming events"
+        ],
+        "responses": [
+            "You can register for events through our Events page on the website. Each event listing includes a registration link and detailed instructions.",
+            "To sign up for an event, visit the specific event's page and fill out the registration form provided. You'll receive a confirmation once registered.",
+            "Event registration is open online. Simply navigate to the Events section on our website, choose the event you're interested in, and follow the registration steps."
+        ]
+    },
+    {
+        "tag": "library_resources",
+        "patterns": [
+            "What resources are available in the library?",
+            "Do you have e-books?",
+            "Library digital resources",
+            "Access to journals and magazines"
+        ],
+        "responses": [
+            "Our library offers a vast collection of books, e-books, academic journals, magazines, and online databases to support your studies and research.",
+            "Yes, we provide access to numerous e-books and digital resources that you can access both on-campus and remotely through our library portal.",
+            "Students can access a wide range of journals, magazines, and research papers through our library's digital subscriptions. Visit the library website for more details."
+        ]
+    },
+    {
+        "tag": "event_feedback",
+        "patterns": [
+            "How can I provide feedback for an event?",
+            "Tell me how to give event feedback",
+            "Feedback on events",
+            "Share my thoughts about an event"
+        ],
+        "responses": [
+            "We value your feedback! You can provide it through the feedback forms available on our website or directly at the event's conclusion.",
+            "To share your thoughts about an event, please fill out the feedback survey sent to your email or visit our Feedback section on the website.",
+            "Your feedback helps us improve. Please submit your comments and suggestions via the feedback link provided after each event."
+        ]
+    },
+    {
+        "tag": "student_ambassadors",
+        "patterns": [
+            "Do you have student ambassadors?",
+            "Tell me about your ambassadors program",
+            "How to become a student ambassador",
+            "Student ambassador opportunities"
+        ],
+        "responses": [
+            "Yes, we have a student ambassadors program where selected students represent the institution at various events and assist prospective students.",
+            "Our ambassadors program involves participating in campus tours, orientation sessions, and promotional activities. Interested students can apply through our website.",
+            "To become a student ambassador, you need to demonstrate leadership qualities and a strong commitment to representing our institution. Apply through the Student Affairs office."
+        ]
+    },
+    {
+        "tag": "language_courses",
+        "patterns": [
+            "Do you offer language courses?",
+            "Can I learn additional languages here?",
+            "Language learning opportunities",
+            "Courses for language proficiency"
+        ],
+        "responses": [
+            "We offer language courses such as English, Hindi, and other regional languages to help students enhance their communication skills.",
+            "Yes, additional language learning opportunities are available through our language center. These courses are designed to improve proficiency and fluency.",
+            "Students can enroll in language proficiency courses to complement their technical education and broaden their communication abilities."
+        ]
+    },
+    {
+        "tag": "safety_measures",
+        "patterns": [
+            "What safety measures are in place?",
+            "How safe is the campus?",
+            "Tell me about campus security",
+            "Safety protocols at your institution"
+        ],
+        "responses": [
+            "Campus safety is our top priority. We have 24/7 security personnel, CCTV surveillance, and emergency response systems to ensure a secure environment.",
+            "Our campus is equipped with comprehensive safety measures including secure access points, well-lit pathways, and regular safety drills.",
+            "We follow strict safety protocols and have dedicated security staff to maintain a safe and welcoming atmosphere for all students and staff."
+        ]
+    },
+    {
+        "tag": "environment_sustainability",
+        "patterns": [
+            "Do you have sustainability initiatives?",
+            "Tell me about your green campus",
+            "Environmental programs",
+            "Sustainability efforts"
+        ],
+        "responses": [
+            "Yes, we are committed to sustainability with initiatives like waste management programs, solar energy usage, and green campus projects.",
+            "Our green campus initiatives include tree planting drives, recycling programs, and promoting eco-friendly practices among students and staff.",
+            "We focus on environmental sustainability through various programs aimed at reducing our carbon footprint and promoting renewable energy sources."
+        ]
+    },
+    {
+        "tag": "partnerships",
+        "patterns": [
+            "Do you have any partnerships?",
+            "Tell me about your collaborations",
+            "Industry partnerships",
+            "Academic collaborations"
+        ],
+        "responses": [
+            "We have partnerships with several leading industries and academic institutions to provide our students with enhanced learning and career opportunities.",
+            "Our collaborations include joint research projects, exchange programs, and internship placements with renowned companies.",
+            "We actively seek academic collaborations to enrich our curriculum and provide students with diverse educational experiences."
+        ]
+    },
+    {
+        "tag": "student_feedback",
+        "patterns": [
+            "How can I give feedback as a student?",
+            "Tell me how to provide student feedback",
+            "Student opinion submission",
+            "Share my suggestions"
+        ],
+        "responses": [
+            "We encourage students to share their feedback through our online feedback forms or by contacting the student affairs office directly.",
+            "To provide your feedback, please fill out the feedback survey available on our website or participate in our regular student forums.",
+            "Your suggestions are valuable to us. You can submit them via email, feedback kiosks on campus, or during student council meetings."
+        ]
+    },
+    {
+        "tag": "library_extended_hours",
+        "patterns": [
+            "Does the library stay open late?",
+            "Library late hours",
+            "Can I use the library at night?",
+            "Extended library timings"
+        ],
+        "responses": [
+            "Yes, the library offers extended hours during exam periods to accommodate students' study needs. Please check the library website for specific timings.",
+            "The library remains open until 10 PM during finals and other examination periods. Regular hours are from 8 AM to 8 PM.",
+            "Night access to the library is available for students under certain conditions. Contact the library administration for more details."
+        ]
+    },
+    {
+        "tag": "greetings",
+        "patterns": [
+            "Hi",
+            "Hello",
+            "Hey there"
+        ],
+        "responses": [
+            "Hello! Welcome to Sanjay Ghodawat Polytechnic. How can I assist you today?",
+            "Hi there! I'm here to help with any questions about our institution.",
+            "Good to see you! Let me know how I can help you today.",
+            "Hey! Welcome to SG Polytechnic. What would you like to know?",
+            "Greetings! How can I assist you regarding our college?"
+        ]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": [
+            "Bye",
+            "Goodbye",
+            "See you later",
+            "Take care"
+        ],
+        "responses": [
+            "Goodbye! Have a wonderful day ahead.",
+            "See you soon! Feel free to reach out if you have more queries.",
+            "Take care and best of luck!",
+            "Bye! It was great assisting you.",
+            "Farewell! Don't hesitate to contact us again.",
+            "See ya! Have a great day.",
+            "Later! Stay safe.",
+            "Bye-bye! All the best."
+        ]
+    },
+    {
+        "tag": "gratitude",
+        "patterns": [
+            "Thank you",
+            "Thanks",
+            "Thanks a lot"
+        ],
+        "responses": [
+            "You're welcome! I'm glad I could help.",
+            "No problem at all! Let me know if there's anything else you need.",
+            "Happy to assist! Feel free to ask if you have more questions.",
+            "Anytime! I'm here to help.",
+            "Glad I could be of assistance.",
+            "You're very welcome!",
+            "My pleasure! Let me know if you need anything else."
+        ]
+    },
+    {
+        "tag": "welcome_back",
+        "patterns": [
+            "I'm back",
+            "Hello again",
+            "Back again"
+        ],
+        "responses": [
+            "Welcome back! How can I assist you today?",
+            "Hello again! What would you like to know this time?",
+            "Great to see you again! How can I help you?",
+            "Welcome back! Feel free to ask me anything about SG Polytechnic.",
+            "Hi again! What information are you looking for today?"
+        ]
+    },
+    {
+        "tag": "apologies",
+        "patterns": [
+            "Sorry",
+            "My apologies",
+            "I'm sorry"
+        ],
+        "responses": [
+            "No worries! How can I assist you further?",
+            "It's okay! Let me know how I can help.",
+            "No problem at all. What else can I do for you?",
+            "Apology accepted. How may I assist you today?",
+            "Don't worry about it! Feel free to ask me anything."
+        ]
+    },
+    {
+        "tag": "affirmative",
+        "patterns": [
+            "Yes",
+            "Yeah"
+        ],
+        "responses": [
+            "Great! How can I assist you further?",
+            "Awesome! Let me know what you need help with.",
+            "Perfect! What would you like to know next?",
+            "Understood. How can I help you today?",
+            "Excellent! Feel free to ask me anything."
+        ]
+    },
+    {
+        "tag": "negative",
+        "patterns": [
+            "No",
+            "Nope",
+            "Not really"
+        ],
+        "responses": [
+            "Alright! If you have any other questions, feel free to ask.",
+            "No problem. Let me know if there's anything else I can help with.",
+            "Understood. I'm here if you need anything else.",
+            "Okay! Don't hesitate to reach out if you change your mind.",
+            "Sure thing. Let me know if you need assistance with something else."
+        ]
+    },
+    {
+        "tag": "small_talk",
+        "patterns": [
+            "How are you?",
+            "How's it going?"
+        ],
+        "responses": [
+            "I'm just a bot, but I'm here to help you! How can I assist you today?",
+            "Doing great! How can I help you with information about SG Polytechnic?",
+            "I'm here and ready to assist you. What would you like to know?",
+            "All systems operational! Let me know how I can assist you.",
+            "I'm here to help you with any queries about our institution. What do you need?"
+        ]
+    },
+    {
+        "tag": "thanks_joking",
+        "patterns": [
+            "Thanks for nothing",
+            "You didn't help",
+            "This is useless"
+        ],
+        "responses": [
+            "I'm sorry to hear that you're feeling this way. Let me try to help you better. What do you need assistance with?",
+            "Apologies for any inconvenience caused. How can I improve your experience?",
+            "I'm sorry if I couldn't help as expected. Please let me know how I can assist you better.",
+            "I understand your frustration. Let me try to provide the information you need.",
+            "My apologies for not meeting your expectations. How can I assist you further?"
+        ]
+    }
+]
