@@ -7,8 +7,8 @@ from streamlit_chat import message
 
 # Set page configuration
 st.set_page_config(
-    page_title="🎓 College Enquiry Chatbot",
-    page_icon=":robot_face:",
+    page_title="🎓 SGI Chatbot",
+    page_icon="👨‍🎓",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -93,67 +93,127 @@ def main():
             max-height: 600px; 
             overflow-y: auto;
             padding: 20px;
-            border: 1px solid #ccc;
-            background-color: #f7f7f7;
-            border-radius: 10px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
             margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .chat-container:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
         /* User message styling */
         .user-message {
-            background-color: #DCF8C6;
-            padding: 10px 15px;
-            border-radius: 15px;
+            background-color: #007ACC;
+            color: white;
+            padding: 15px;
+            border-radius: 25px;
             margin-bottom: 10px;
             text-align: left;
             width: fit-content;
-            max-width: 80%;
+            max-width: 75%;
             align-self: flex-end;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            position: relative;
+        }
+        .user-message:after {
+            content: "👤";
+            position: absolute;
+            top: -30px;
+            right: -10px;
+            font-size: 25px;
+            animation: bounce 1s infinite;
+        }
+        .user-message:hover {
+            transform: scale(1.05);
         }
         /* Bot message styling */
         .bot-message {
-            background-color: #E4E6EB;
-            padding: 10px 15px;
-            border-radius: 15px;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 15px;
+            border-radius: 25px;
             margin-bottom: 10px;
             text-align: left;
             width: fit-content;
-            max-width: 80%;
+            max-width: 75%;
             align-self: flex-start;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            position: relative;
+        }
+        .bot-message:after {
+            content: "🤖";
+            position: absolute;
+            top: -30px;
+            left: -10px;
+            font-size: 25px;
+            animation: shake 1s infinite;
+        }
+        .bot-message:hover {
+            transform: scale(1.05);
         }
         /* Scrollbar styling */
         .chat-container::-webkit-scrollbar {
             width: 8px;
         }
         .chat-container::-webkit-scrollbar-thumb {
-            background-color: #c1c1c1;
-            border-radius: 4px;
+            background-color: #cccccc;
+            border-radius: 10px;
         }
         /* Input box styling */
-        .stTextInput>div>div>input {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            width: 100%;
+
+        .stTextInput>div>div>input:focus {
+            border-color: #007ACC;
         }
         /* Send button styling */
         .stButton>button {
-            background-color: #4CAF50;
+            background-color: #007ACC;
             color: white;
-            padding: 10px 24px;
+            padding: 15px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s;
         }
         .stButton>button:hover {
-            background-color: #45a049;
+            background-color: #005f99;
+            transform: scale(1.05);
+        }
+        /* Keyframes for animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0); 
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        @keyframes shake {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(2deg);
+            }
+            50% {
+                transform: rotate(-2deg);
+            }
+            75% {
+                transform: rotate(2deg);
+            }
         }
         </style>
         """, unsafe_allow_html=True)
 
-    st.title("🎓 College Enquiry Chatbot")
+    st.title("🎓 SGI Chatbot")
     st.write("Welcome! I'm here to assist you with any questions you might have about our college.")
 
     # Initialize chat history
