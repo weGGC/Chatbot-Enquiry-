@@ -206,8 +206,10 @@ def render_notice():
         admin_password = st.text_input("Enter Admin Password", type="password", key="admin_password")
         if admin_password == "admin123":  # Example password, replace with a secure authentication method
             new_notice = st.text_area("Set Notice", key="notice_input")
+            authority = st.selectbox("Approved By", ("HOD", "Principal", "Director"), key="authority_select")
             if st.button("Submit Notice", key="submit_notice"):
-                save_notice(new_notice)
+                notice_text = f"{new_notice}\n\nApproved by: {authority}"
+                save_notice(notice_text)
                 st.success("Notice updated successfully!")
         else:
             st.warning("Incorrect password. Please try again.")
