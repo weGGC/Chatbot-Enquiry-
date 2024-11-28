@@ -7,7 +7,7 @@ from streamlit_chat import message
 
 # Set page configuration
 st.set_page_config(
-    page_title="🎓 SGI Chatbot",
+    page_title="🎓 ASAC Chatbot",
     page_icon="👨‍🎓",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -167,13 +167,49 @@ def apply_css():
         unsafe_allow_html=True
     )
 
-# Render different sections
 def render_home():
-    st.title("Welcome to SGI College Enquiry System")
-    st.write("This platform is designed to assist students with any queries they may have about the college.")
-    st.write("For more information about our college, visit [SGI Official Website](https://www.sgi.ac.in)")
+    # Centered and bold title
+    st.markdown("<h1 style='text-align: center; font-weight: bold;'>Welcome to ASAC College Enquiry System</h1><br><br>", unsafe_allow_html=True)
 
+    # Centered heading for "Explore Our College Services"
+    st.markdown("<h2 style='text-align: center;'>Explore Our College Services</h2><br><br>", unsafe_allow_html=True)
+
+    # First Section: Content on the left and Image on the right
+    left_col, right_col = st.columns([2, 1])
+
+    with left_col:
+        st.markdown("""
+            <div style='padding-right: 30px;'>
+                <p style='font-size: 18px;'><br><br><br><br>SGI College offers a wide variety of educational programs that cater to the needs of diverse student groups. Whether you're looking for undergraduate, postgraduate, or diploma programs, SGI College is here to guide you every step of the way. We pride ourselves on our strong academic reputation and commitment to student success.</p>
+            </div>
+        """, unsafe_allow_html=True)
+
+    with right_col:
+        st.image("img/college_building.jpg", use_column_width=True, caption="SGI College Campus")
+
+    # Second Section: Image on the left and Content on the right
+    left_col, right_col = st.columns([1, 2])
+
+    with left_col:
+        st.image("img/student_life.jpg", use_column_width=True, caption="Campus Life")
+
+    with right_col:
+        st.markdown("""
+            <div style='padding-left: 30px;'>
+                <p style='font-size: 18px;'><br><br><br><br>At SGI College, we believe in fostering a vibrant student community. Our campus is not just a place for academic learning but also for personal growth. We offer various student clubs, sports activities, and events that encourage students to engage in extracurricular activities, creating a well-rounded college experience.</p>
+            </div>
+        """, unsafe_allow_html=True)
+
+    # "For more info" section positioned at the bottom-right
+    st.markdown("""
+        <div style="position: fixed; bottom: 20px; right: 20px; font-size: 18px; background-color: black; padding: 10px 20px; border-radius: 5px; box-shadow: 0px 4px 6px rgba(0,0,0,0.1);">
+            For more information about our programs and student services, visit <a href="https://sgipolytechnic.in/#/" target="_blank" style="color: #007bff; text-decoration: none;">SGI Official Website</a>
+        </div>
+    """, unsafe_allow_html=True)
+
+    
 def render_feedback():
+    
     st.title("Feedback")
     st.write("We value your feedback. Please share your thoughts about your experience.")
 
@@ -194,29 +230,77 @@ def render_feedback():
         st.write("No feedback available yet.")
 
 def render_about():
-    st.title("About Us")
-    st.write("SGI is a reputed educational institution dedicated to providing quality education to students.")
-    st.write("We offer a variety of courses in different fields to help students excel in their career paths.")
+    # Centered, bold, and large title
+    st.markdown("<h1 style='text-align: center; font-weight: bold;'>About Us</h1>", unsafe_allow_html=True)
+    
+    # Centered description about the institution
+    st.markdown("<h3 style='text-align: center; font-size: 18px;'>SGI is a reputed educational institution dedicated to providing quality education to students.</h3><br>", unsafe_allow_html=True)
+
+    # Upload image using st.image() at the top of the page
+    st.image("img/background.jpg", use_column_width=True)
+    
+    # Path to the background image for div sections
+    background_image_path = "img/background.jpg"
+    
+    # Section for "Why Use a Chatbot for Learning?"
+    st.markdown(
+        f"""
+        <div style="background-image: url('{background_image_path}'); background-size: cover; background-position: center center; padding: 20px; border-radius: 8px; color: white; text-align: center;">
+            <h2>Why Use a Chatbot for Learning?</h2>
+            <p>A chatbot can be a helpful resource for memorization tasks. By asking or responding to a set of questions, students can learn through repetition as well as accompanying explanations. The chatbot will not tire as students use it repeatedly, and is available as a practice partner at any time of day or night.</p>
+        </div>
+        """, 
+        unsafe_allow_html=True
+    )
+
+    # Section for "We Provide the Answers for Each Student"
+    st.markdown(
+        f"""
+        <div style="background-image: url('{background_image_path}'); background-size: cover; background-position: center center; padding: 20px; border-radius: 8px; color: white; text-align: center;">
+            <h2>We Provide the Answers for Each Student</h2>
+            <p>Some great placeholder content for the first featurette here. Imagine some exciting prose here. At the most basic level, a chatbot is a computer program that simulates and processes human conversation (either written or spoken), allowing humans to interact with digital devices as if they were communicating with a real person.</p>
+        </div>
+        """, 
+        unsafe_allow_html=True
+    )
+
+
+
 
 def render_notice():
-    st.title("Notice Board")
-    user_type = st.radio("Select User Type", ("User", "Admin"), key="user_type")
+    # Center the "Notice Board" title
+    st.markdown("<h1 style='text-align: center;'>Notice Board</h1><br><br>", unsafe_allow_html=True)
+    
+    # Dropdown to select User or Admin
+    user_type = st.selectbox("Select User Type", ["User", "Admin"], key="user_type")
 
     if user_type == "Admin":
+        # Admin section to enter password and update notice
         admin_password = st.text_input("Enter Admin Password", type="password", key="admin_password")
         if admin_password == "admin123":  # Example password, replace with a secure authentication method
-            new_notice = st.text_area("Set Notice", key="notice_input")
-            authority = st.selectbox("Approved By", ("HOD", "Principal", "Director"), key="authority_select")
+            new_notice = st.text_area("Set Notice", key="notice_input", height=150)
+            authority = st.selectbox("Approved By", ["HOD", "Principal", "Director"], key="authority_select")
+
             if st.button("Submit Notice", key="submit_notice"):
                 notice_text = f"{new_notice}\n\nApproved by: {authority}"
                 save_notice(notice_text)
                 st.success("Notice updated successfully!")
+
         else:
             st.warning("Incorrect password. Please try again.")
+
     else:
+        # Display current notice for User
         notice = load_notice()
-        st.write("### Current Notice")
-        st.write(notice)
+        st.markdown("<h3 style='text-align: center;'>Current Notice</h3>", unsafe_allow_html=True)
+        st.markdown(f"""
+            <div style="text-align: center; font-size: 40px; padding: 20px; border-radius: 8px; ;">
+                {notice}
+            </div>
+        """, unsafe_allow_html=True)
+
+        
+
 
 # Main Streamlit app
 def main():
@@ -228,14 +312,15 @@ def main():
         st.markdown("---")
         if st.button("Home", key="home_button"):
             st.session_state.nav_option = "Home"
-        if st.button("Chatbot", key="chatbot_button"):
-            st.session_state.nav_option = "Chatbot"
-        if st.button("Feedback", key="feedback_button"):
-            st.session_state.nav_option = "Feedback"
         if st.button("About Us", key="about_button"):
             st.session_state.nav_option = "About Us"
+        if st.button("Chatbot", key="chatbot_button"):
+            st.session_state.nav_option = "Chatbot"
         if st.button("Notice Board", key="notice_button"):
             st.session_state.nav_option = "Notice Board"
+        if st.button("Feedback", key="feedback_button"):
+            st.session_state.nav_option = "Feedback"
+
 
     if 'nav_option' not in st.session_state:
         st.session_state.nav_option = "Chatbot"
@@ -248,7 +333,7 @@ def main():
         # Retain original Chatbot Section
         left_col, center_col, right_col = st.columns([1, 2, 1])
         with center_col:
-            st.title("🎓 SGI Chatbot")
+            st.title("🎓 ASAC Chatbot")
             st.write("Welcome! I'm here to assist you with any questions you might have about our college.")
             initialize_chat()
             chat_placeholder = st.container()
